@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Brave Search Engine Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function escapeHTML(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      let selectedFilter = 'web'; // Default filter
+
+      function setFilter(filter) {
+        selectedFilter = filter;
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.classList.toggle('bg-blue-600', btn.dataset.filter === filter);
+          btn.classList.toggle('bg-blue-500', btn.dataset.filter !== filter);
+        });
+        searchBrave(); // Trigger search with new filter
+      }
+
+      async function searchBrave() {
+        const query = document.getElementById("searchInput").value;
+        const resultsDiv = document.getElementById("results");
+        const button = document.querySelector("button");
+
+        if (!query.trim()) {
+          resultsDiv.innerHTML = "Please enter a search query.";
+          return;
+        }
+
+        button.disabled = true;
+        resultsDiv.innerHTML = "Searching...";
+
+        try {
+          const response = await fetch(
+            `http://localhost:5500/search?q=${encodeURIComponent(
+              query
+            )}&type=${selectedFilter}`
+          );
+
+          if (!response.ok) {
+            const error = await response.json();
+            resultsDiv.innerHTML = `Error: ${
+              error.error || "Failed to fetch results."
+            }`;
+            return;
+          }
+
+          const data = await response.json();
+          resultsDiv.innerHTML = ""; // Clear previous results
+
+          // Handle different result types
+          if (selectedFilter === 'web' && data.web?.results) {
+            resultsDiv.innerHTML = data.web.results
+              .map(
+                (item) => `
+                  <div class="flex gap-4 items-start mb-6">
+                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
+                         class="w-12 h-12 rounded-full object-cover mt-1" alt="Thumbnail" />
+                    <div>
+                      <div class="text-sm text-slate-700">
+                        ${escapeHTML(item.profile?.name || "")} · ${escapeHTML(
+                  item.meta_url?.hostname || ""
+                )}
+                      </div>
+                      <a href="${escapeHTML(item.url)}" target="_blank"
+                         class="text-blue-500 hover:underline text-lg font-medium">
+                         ${escapeHTML(item.title)}
+                      </a>
+                      <p class="text-slate-600 text-sm mt-1 leading-snug">
+                        ${escapeHTML(item.description)}
+                      </p>
+                    </div>
+                  </div>
+                `
+              )
+              .join("");
+          } else if (selectedFilter === 'images' && data.results) {
+            resultsDiv.innerHTML = data.results
+              .map(
+                (item) => `
+                  <div class="flex gap-4 items-start mb-6">
+                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
+                         class="w-24 h-24 object-cover" alt="Image" />
+                    <div>
+                      <a href="${escapeHTML(item.url)}" target="_blank"
+                         class="text-blue-500 hover:underline text-lg font-medium">
+                         ${escapeHTML(item.title)}
+                      </a>
+                      <p class="text-slate-600 text-sm mt-1">
+                        Source: ${escapeHTML(item.meta_url?.hostname || "")}
+                      </p>
+                    </div>
+                  </div>
+                `
+              )
+              .join("");
+          } else if (selectedFilter === 'videos' && data.results) {
+            resultsDiv.innerHTML = data.results
+              .map(
+                (item) => `
+                  <div class="flex gap-4 items-start mb-6">
+                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
+                         class="w-24 h-24 object-cover" alt="Video Thumbnail" />
+                    <div>
+                      <a href="${escapeHTML(item.url)}" target="_blank"
+                         class="text-blue-500 hover:underline text-lg font-medium">
+                         ${escapeHTML(item.title)}
+                      </a>
+                      <p class="text-slate-600 text-sm mt-1">
+                        Duration: ${item.duration || "Unknown"} · Source: ${escapeHTML(
+                  item.meta_url?.hostname || ""
+                )}
+                      </p>
+                    </div>
+                  </div>
+                `
+              )
+              .join("");
+          } else if (selectedFilter === 'news' && data.results) {
+            resultsDiv.innerHTML = data.results
+              .map(
+                (item) => `
+                  <div class="flex gap-4 items-start mb-6">
+                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
+                         class="w-24 h-24 object-cover" alt="News Thumbnail" />
+                    <div>
+                      <a href="${escapeHTML(item.url)}" target="_blank"
+                         class="text-blue-500 hover:underline text-lg font-medium">
+                         ${escapeHTML(item.title)}
+                      </a>
+                      <p class="text-slate-600 text-sm mt-1">
+                        ${escapeHTML(item.description || "")} · Published: ${
+                  item.published_date || "Unknown"
+                }
+                      </p>
+                    </div>
+                  </div>
+                `
+              )
+              .join("");
+          } else {
+            resultsDiv.innerHTML = "No results found.";
+          }
+        } catch (err) {
+          resultsDiv.innerHTML = `Error: ${err.message}`;
+        } finally {
+          button.disabled = false;
+        }
+      }
+    </script>
+    <link href="./src/output.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100 min-h-screen py-2">
+    <section class="max-w-screen-xl mx-auto bg-white rounded shadow p-6">
+      <h1 class="text-2xl font-bold mb-4">Brave Search Engine</h1>
+      <input
+        type="text"
+        id="searchInput"
+        class="w-full border p-2 rounded mb-4"
+        placeholder="Enter your search..."
+      />
+      <div class="flex gap-2 mb-4">
+        <button
+          class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          data-filter="web"
+          onclick="setFilter('web')"
+        >
+          All
+        </button>
+        <button
+          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          data-filter="images"
+          onclick="setFilter('images')"
+        >
+          Images
+        </button>
+        <button
+          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          data-filter="videos"
+          onclick="setFilter('videos')"
+        >
+          Videos
+        </button>
+        <button
+          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          data-filter="news"
+          onclick="setFilter('news')"
+        >
+          News
+        </button>
+      </div>
+      <button
+        onclick="searchBrave()"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Search
+      </button>
+      <div id="results" class="mt-6"></div>
+    </section>
+  </body>
+</html>
