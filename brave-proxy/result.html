@@ -2,8 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Brave Search Engine Demo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fotis</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      body {
+        background-color: #1d1d1d;
+        color: #ffffff;
+      }
+      .search-container {
+        transition: all 0.3s ease;
+      }
+      .search-container:focus-within {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 2px solid #f97316;
+      }
+      .search-button {
+        transition: all 0.3s ease;
+      }
+      .search-button:hover {
+        transform: translateY(-1px);
+      }
+      .result-card {
+        transition: all 0.2s ease;
+      }
+      .underline-animate {
+        position: relative;
+      }
+      .underline-animate::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #f97316;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+      }
+      .underline-animate:hover::after {
+        transform: scaleX(1);
+      }
+    </style>
+
     <script>
       function escapeHTML(str) {
         return str
@@ -11,36 +53,187 @@
           .replace(/</g, "&lt;")
           .replace(/>/g, "&gt;")
           .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
+          .replace(/'/g, "&#39;");
       }
 
-      let selectedFilter = 'web'; // Default filter
+      let selectedFilter = "web"; // Default filter
+      const API_BASE_URL = "http://localhost:5500";
+
+      // Function to get URL parameters
+      function getURLParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Function to update URL with search parameters
+      function updateURLWithSearch(query, filter) {
+        const url = new URL(window.location);
+        url.searchParams.set("q", query);
+        url.searchParams.set("type", filter);
+        window.history.pushState({}, "", url);
+      }
 
       function setFilter(filter) {
         selectedFilter = filter;
-        document.querySelectorAll('.filter-btn').forEach((btn) => {
-          btn.classList.toggle('bg-blue-600', btn.dataset.filter === filter);
-          btn.classList.toggle('bg-blue-500', btn.dataset.filter !== filter);
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.toggle("bg-transparent", btn.dataset.filter !== filter);
         });
-        searchBrave(); // Trigger search with new filter
+
+        // If there's a query in the search box, update the URL with the new filter
+        const query = document.getElementById("searchInput").value;
+        if (query && query.trim().length >= 2) {
+          updateURLWithSearch(query, filter);
+          searchBrave(); // Optional: search immediately when filter changes
+        }
+      }
+
+      function renderResults(results, filter, resultsDiv) {
+        resultsDiv.innerHTML = "";
+        if (!results || results.length === 0) {
+          resultsDiv.innerHTML = "No results found.";
+          return;
+        }
+
+        if (filter === "web") {
+          resultsDiv.innerHTML = results
+            .map(
+              (item) => `
+    <div class="result-card my-[20px] sm:my-[55px]">
+      <div class="flex gap-4 items-center mb-[10px]">
+        <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden">
+          ${
+            item.thumbnail?.src
+              ? `<img src="${escapeHTML(
+                  item.thumbnail.src
+                )}" alt="thumbnail" class="w-[30px] h-[30px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] object-cover" />`
+              : ""
+          }
+        </div>
+        <div>
+          <p class="text-[16px] font-semibold">${escapeHTML(
+            item.profile?.name || ""
+          )}</p>
+          <p class="text-[14px]">${escapeHTML(
+            item.meta_url?.hostname || ""
+          )}</p>
+        </div>
+      </div>
+      <a href="${escapeHTML(
+        item.url
+      )}" target="_blank" class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" aria-label="Visit ${escapeHTML(
+                item.title
+              )}">
+        ${escapeHTML(item.title)}
+      </a>
+      <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
+        ${item.description}
+      </p>
+    </div>
+  `
+            )
+            .join("");
+        } else if (filter === "images") {
+          resultsDiv.innerHTML = results
+            .map(
+              (item) => `
+    <div class="flex gap-4 mb-6">
+      <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden flex justify-center items-center">
+        <img src="${escapeHTML(
+          item.thumbnail.src
+        )}" alt="thumbnail" class="mx-auto w-full h-full rounded-[10px] sm:rounded-[20px] object-cover" />
+      </div>
+      <div>
+        <a href="${escapeHTML(
+          item.url
+        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
+                item.title
+              )}">
+          ${escapeHTML(item.title)}
+        </a>
+        <p class="text-slate-600 text-sm mt-1">
+          Source: ${escapeHTML(item.meta_url?.hostname || "")}
+        </p>
+      </div>
+    </div>
+  `
+            )
+            .join("");
+        } else if (filter === "videos") {
+          resultsDiv.innerHTML = results
+            .map(
+              (item) => `
+    <div class="flex gap-4 items-start mb-6">
+      <img src="${escapeHTML(
+        item.thumbnail?.src || ""
+      )}" class="w-24 h-24 object-cover" alt="Video Thumbnail" />
+      <div>
+        <a href="${escapeHTML(
+          item.url
+        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
+                item.title
+              )}">
+          ${escapeHTML(item.title)}
+        </a>
+        <p class="text-slate-600 text-sm mt-1">
+          Duration: ${item.duration || "Unknown"} · Source: ${escapeHTML(
+                item.meta_url?.hostname || ""
+              )}
+        </p>
+      </div>
+    </div>
+  `
+            )
+            .join("");
+        } else if (filter === "news") {
+          resultsDiv.innerHTML = results
+            .map(
+              (item) => `
+    <div class="flex gap-4 items-start mb-6">
+      <img src="${escapeHTML(
+        item.thumbnail?.src || ""
+      )}" class="w-24 h-24 object-cover" alt="News Thumbnail" />
+      <div>
+        <a href="${escapeHTML(
+          item.url
+        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
+                item.title
+              )}">
+          ${escapeHTML(item.title)}
+        </a>
+        <p class="text-slate-600 text-sm mt-1">
+          ${escapeHTML(item.description || "")} · Published: ${
+                item.published_date || "Unknown"
+              }
+        </p>
+      </div>
+    </div>
+  `
+            )
+            .join("");
+        }
       }
 
       async function searchBrave() {
+        console.log("Search triggered by:", new Error().stack);
         const query = document.getElementById("searchInput").value;
         const resultsDiv = document.getElementById("results");
         const button = document.querySelector("button");
 
-        if (!query.trim()) {
-          resultsDiv.innerHTML = "Please enter a search query.";
+        if (!query.trim() || query.length < 2) {
+          resultsDiv.innerHTML =
+            "Please enter a valid search query (minimum 2 characters).";
           return;
         }
 
+        // Update URL with search parameters
+        updateURLWithSearch(query, selectedFilter);
+
         button.disabled = true;
-        resultsDiv.innerHTML = "Searching...";
+        resultsDiv.innerHTML = `<div class="flex justify-center"><div class="spinner">Loading...</div></div>`;
 
         try {
           const response = await fetch(
-            `http://localhost:5500/search?q=${encodeURIComponent(
+            `${API_BASE_URL}/search?q=${encodeURIComponent(
               query
             )}&type=${selectedFilter}`
           );
@@ -54,156 +247,127 @@
           }
 
           const data = await response.json();
-          resultsDiv.innerHTML = ""; // Clear previous results
+          const results =
+            selectedFilter === "web"
+              ? data.web?.results || []
+              : data.results || [];
+          localStorage.setItem("lastResults", JSON.stringify(results));
+          localStorage.setItem("lastFilter", selectedFilter);
 
-          // Handle different result types
-          if (selectedFilter === 'web' && data.web?.results) {
-            resultsDiv.innerHTML = data.web.results
-              .map(
-                (item) => `
-                  <div class="flex gap-4 items-start mb-6">
-                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
-                         class="w-12 h-12 rounded-full object-cover mt-1" alt="Thumbnail" />
-                    <div>
-                      <div class="text-sm text-slate-700">
-                        ${escapeHTML(item.profile?.name || "")} · ${escapeHTML(
-                  item.meta_url?.hostname || ""
-                )}
-                      </div>
-                      <a href="${escapeHTML(item.url)}" target="_blank"
-                         class="text-blue-500 hover:underline text-lg font-medium">
-                         ${escapeHTML(item.title)}
-                      </a>
-                      <p class="text-slate-600 text-sm mt-1 leading-snug">
-                        ${escapeHTML(item.description)}
-                      </p>
-                    </div>
-                  </div>
-                `
-              )
-              .join("");
-          } else if (selectedFilter === 'images' && data.results) {
-            resultsDiv.innerHTML = data.results
-              .map(
-                (item) => `
-                  <div class="flex gap-4 items-start mb-6">
-                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
-                         class="w-24 h-24 object-cover" alt="Image" />
-                    <div>
-                      <a href="${escapeHTML(item.url)}" target="_blank"
-                         class="text-blue-500 hover:underline text-lg font-medium">
-                         ${escapeHTML(item.title)}
-                      </a>
-                      <p class="text-slate-600 text-sm mt-1">
-                        Source: ${escapeHTML(item.meta_url?.hostname || "")}
-                      </p>
-                    </div>
-                  </div>
-                `
-              )
-              .join("");
-          } else if (selectedFilter === 'videos' && data.results) {
-            resultsDiv.innerHTML = data.results
-              .map(
-                (item) => `
-                  <div class="flex gap-4 items-start mb-6">
-                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
-                         class="w-24 h-24 object-cover" alt="Video Thumbnail" />
-                    <div>
-                      <a href="${escapeHTML(item.url)}" target="_blank"
-                         class="text-blue-500 hover:underline text-lg font-medium">
-                         ${escapeHTML(item.title)}
-                      </a>
-                      <p class="text-slate-600 text-sm mt-1">
-                        Duration: ${item.duration || "Unknown"} · Source: ${escapeHTML(
-                  item.meta_url?.hostname || ""
-                )}
-                      </p>
-                    </div>
-                  </div>
-                `
-              )
-              .join("");
-          } else if (selectedFilter === 'news' && data.results) {
-            resultsDiv.innerHTML = data.results
-              .map(
-                (item) => `
-                  <div class="flex gap-4 items-start mb-6">
-                    <img src="${escapeHTML(item.thumbnail?.src || "")}" 
-                         class="w-24 h-24 object-cover" alt="News Thumbnail" />
-                    <div>
-                      <a href="${escapeHTML(item.url)}" target="_blank"
-                         class="text-blue-500 hover:underline text-lg font-medium">
-                         ${escapeHTML(item.title)}
-                      </a>
-                      <p class="text-slate-600 text-sm mt-1">
-                        ${escapeHTML(item.description || "")} · Published: ${
-                  item.published_date || "Unknown"
-                }
-                      </p>
-                    </div>
-                  </div>
-                `
-              )
-              .join("");
-          } else {
-            resultsDiv.innerHTML = "No results found.";
-          }
+          renderResults(results, selectedFilter, resultsDiv);
         } catch (err) {
           resultsDiv.innerHTML = `Error: ${err.message}`;
         } finally {
           button.disabled = false;
         }
       }
+
+      // Function to load saved results (if any)
+      function loadSavedResults() {
+        const savedResults = localStorage.getItem("lastResults");
+        const savedFilter = localStorage.getItem("lastFilter");
+        const resultsDiv = document.getElementById("results");
+
+        if (savedResults && savedFilter) {
+          try {
+            const results = JSON.parse(savedResults);
+            selectedFilter = savedFilter;
+            document.querySelectorAll(".filter-btn").forEach((btn) => {
+              btn.classList.toggle(
+                "bg-transparent",
+                btn.dataset.filter !== selectedFilter
+              );
+            });
+            renderResults(results, savedFilter, resultsDiv);
+          } catch (err) {
+            resultsDiv.innerHTML = "Error: Failed to load saved results.";
+          }
+        } else {
+          resultsDiv.innerHTML = "";
+        }
+      }
+
+      // Initialize event listeners when DOM is loaded
+      window.addEventListener("DOMContentLoaded", () => {
+        // Load saved results
+        loadSavedResults();
+
+        // Set up event listeners for search button and Enter key
+        document
+          .getElementById("searchButton")
+          .addEventListener("click", searchBrave);
+
+        document
+          .getElementById("searchInput")
+          .addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+              searchBrave();
+            }
+          });
+
+        // Set up filter buttons
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.addEventListener("click", () => setFilter(btn.dataset.filter));
+        });
+      });
     </script>
-    <link href="./src/output.css" rel="stylesheet">
   </head>
-  <body class="bg-gray-100 min-h-screen py-2">
-    <section class="max-w-screen-xl mx-auto bg-white rounded shadow p-6">
-      <h1 class="text-2xl font-bold mb-4">Brave Search Engine</h1>
-      <input
-        type="text"
-        id="searchInput"
-        class="w-full border p-2 rounded mb-4"
-        placeholder="Enter your search..."
-      />
-      <div class="flex gap-2 mb-4">
+  <body class="min-h-screen p-4">
+    <section class="max-w-screen-2xl w-full mx-auto rounded-2xl shadow-sm p-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <img src="./assets/logo/fotise.png" alt="fotise logo" class="w-24" />
+        <div
+          class="flex w-full search-container rounded-lg bg-[#2F3035]/85 p-1"
+        >
+          <input
+            type="text"
+            id="searchInput"
+            class="w-full p-2 rounded-lg bg-[#2F3035]/85 focus:outline-none"
+            placeholder="Search the web..."
+          />
+          <button
+            id="searchButton"
+            onclick="searchBrave()"
+            class="search-button bg-orange-500 px-6 rounded-lg font-medium hover:bg-orange-600"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <hr class="my-2 text-slate-500" />
+      <div class="flex gap-8 mb-4 sm:px-[120px]">
         <button
-          class="filter-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="web"
           onclick="setFilter('web')"
         >
-          All
+          Web
         </button>
         <button
-          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="images"
           onclick="setFilter('images')"
         >
           Images
         </button>
         <button
-          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="videos"
           onclick="setFilter('videos')"
         >
           Videos
         </button>
         <button
-          class="filter-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="news"
           onclick="setFilter('news')"
         >
           News
         </button>
       </div>
-      <button
-        onclick="searchBrave()"
-        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Search
-      </button>
-      <div id="results" class="mt-6"></div>
+      <div id="results" class="mt-4 sm:px-[120px]">
+        Start typing to search...
+      </div>
     </section>
   </body>
 </html>

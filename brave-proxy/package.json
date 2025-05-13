@@ -4,12 +4,9 @@
   "description": "A demo search engine using the Brave Search API",
   "main": "result.js",
   "scripts": {
-    "start": "node result.js",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch & live-server ./",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css"
+    "start": "node result.js"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
