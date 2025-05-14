@@ -1,0 +1,246 @@
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Brave Search</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <style>
+      .search-container {
+        transition: all 0.3s ease;
+      }
+      .search-container:focus-within {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .search-button {
+        transition: all 0.3s ease;
+      }
+      .search-button:hover {
+        transform: translateY(-1px);
+      }
+      .result-card {
+        transition: all 0.2s ease;
+      }
+      .result-card:hover {
+        transform: translateX(1px);
+      }
+      .underline-animate::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .underline-animate:hover::after {
+        transform: scaleX(1);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen p-4">
+    <section class="max-w-screen-2xl w-full mx-auto rounded-2xl shadow-sm p-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <img
+          src="/brave-proxy/assets/logo/fotise.png"
+          alt="fotise logo"
+          class="w-24"
+        />
+        <div
+          class="flex w-full search-container rounded-lg bg-[#2F3035]/85 p-1"
+        >
+          <input
+            type="text"
+            id="searchInput"
+            class="w-full p-2 rounded-lg bg-[#2F3035]/85 focus:outline-none"
+            placeholder="Search the web..."
+          />
+          <button
+            onclick="searchBrave()"
+            class="search-button bg-orange-500 px-6 rounded-lg font-medium hover:bg-orange-600"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <hr class="my-2 text-slate-500" />
+      <div class="flex gap-8 mb-4 sm:px-[120px]">
+        <button
+          class="filter-btn bg-transparent py-2 rounded underline hover:underline transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          data-filter="web"
+          onclick="setFilter('web')"
+        >
+          Web
+        </button>
+        <button
+          class="filter-btn bg-transparent py-2 rounded hover:underline transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          data-filter="images"
+          onclick="setFilter('images')"
+        >
+          Images
+        </button>
+        <button
+          class="filter-btn bg-transparent py-2 rounded hover:underline transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          data-filter="videos"
+          onclick="setFilter('videos')"
+        >
+          Videos
+        </button>
+        <button
+          class="filter-btn bg-transparent py-2 rounded hover:underline transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          data-filter="news"
+          onclick="setFilter('news')"
+        >
+          News
+        </button>
+      </div>
+
+      <div id="results" class="mt-4 sm:px-[120px]"></div>
+    </section>
+    <script>
+      function escapeHTML(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+      function searchBrave() {
+        const query = document.getElementById("searchInput").value;
+        if (query.trim() === "") return;
+        const data = {
+          type: "video_result",
+          url: "https://www.youtube.com/watch?v=VB_-98tQ1o8",
+          title:
+            "This Pointer In C++ | This Pointer In C++ With Example Program | Pointers In C++ | Simplilearn - YouTube",
+          description:
+            "🔥Full Stack Java Developer Program (Discount Code - YTBE15) - https://www.simplilearn.com/java-full-stack-developer-certification?utm_campaign=VB_-98tQ1o8&u",
+          age: "September 8, 2021",
+          page_age: "2021-09-08T06:30:06",
+          video: {
+            duration: "21:35",
+            views: 23410,
+            creator: "Simplilearn",
+            publisher: "YouTube",
+            requires_subscription: false,
+            tags: ["simplilearn"],
+            author: {
+              name: "Simplilearn",
+              url: "http://www.youtube.com/@SimplilearnOfficial",
+            },
+          },
+          meta_url: {
+            scheme: "https",
+            netloc: "youtube.com",
+            hostname: "www.youtube.com",
+            favicon:
+              "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+            path: "› watch",
+          },
+          thumbnail: {
+            src: "https://imgs.search.brave.com/3tOMRDPLaXDYQAlfVlpmIkRFae2Q1SxoE9bcnySK1zw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9W/Ql8tOTh0UTFvOC9t/YXhyZXNkZWZhdWx0/LmpwZw",
+            original: "https://i.ytimg.com/vi/VB_-98tQ1o8/maxresdefault.jpg",
+          },
+        };
+
+        // Placeholder for search results
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = `    
+          <div class="result-card my-[20px] sm:my-[55px]">
+  <div class="flex flex-col gap-4">
+    <p class="text-sm text-white/80">
+      <span class="font-medium">${escapeHTML(
+        data.meta_url?.hostname || ""
+      )}</span>
+      <span class="px-2">${escapeHTML(data.meta_url?.path || "")}</span>
+    </p>
+    <a
+      href="${escapeHTML(data.url)}"
+      target="_blank"
+      class="text-lg md:text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer"
+      aria-label="Visit ${escapeHTML(data.title)}"
+    >${escapeHTML(data.title)}</a>
+    <div class="flex gap-4">
+        <a href="${escapeHTML(
+          data?.url || "#"
+        )}" target="_blank" aria-label="Visit ${escapeHTML(
+          data?.title || "thumbnail link"
+        )}"> 
+            ${
+              data.thumbnail?.original
+                ? `<img src="${escapeHTML(
+                    data.thumbnail.original
+                  )}" alt="Thumbnail of ${escapeHTML(
+                    data.title
+                  )}" class="rounded-[10px]" style="width: 300px; height: auto"/ loading="lazy">`
+                : '<div class="w-[300px] h-32 bg-gray-500 rounded-[10px] flex items-center justify-center text-white/80">No thumbnail</div>'
+            }
+        </a>
+      <div class="flex flex-col justify-between">
+        <p class=" text-[10px] sm:text-sm line-clamp-2 text-white/80">
+          ${escapeHTML(data.description || "No description available")}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+          <span class="text-sm text-white/80">
+            ${escapeHTML(data.video?.publisher || "Unknown publisher")}
+          </span>
+          <span class="text-sm text-white/80">
+            ${escapeHTML(data.video?.creator || "Unknown creator")}
+          </span>
+          <span class="text-sm text-white/80">
+            ${escapeHTML(data?.age || "N/A")}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        `;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <div class="result-card my-[20px] sm:my-[40px] my-[55px]">
+          <div class="flex gap-4 items-center mb-[10px]">
+            <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden p-1">
+              <img 
+                src="${escapeHTML(
+                  item.profile?.img || item.thumbnail?.original || ""
+                )}" 
+                alt="${escapeHTML(item.profile?.name || "website icon")}" 
+                class="w-full h-full object-cover" 
+              />
+            </div>
+            <div>
+              <p class="text-[16px] font-semibold">${escapeHTML(
+                item.profile?.name || ""
+              )}</p>
+              <p class="text-sm mt-1 text-white/80" aria-label="URL details">
+                <span class="font-medium">${escapeHTML(
+                  item.meta_url?.hostname || ""
+                )}</span>
+                <span class="px-2">${escapeHTML(
+                  item.meta_url?.path || ""
+                )}</span>
+              </p>
+            </div>
+          </div>
+          <a 
+            href="${escapeHTML(item.url)}" 
+            target="_blank" 
+            class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" 
+            aria-label="Visit ${escapeHTML(item.title)}"
+          >
+            ${escapeHTML(item.title)}
+          </a>
+          <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
+            ${item.description || "No description available"}
+          </p>
+        </div> -->

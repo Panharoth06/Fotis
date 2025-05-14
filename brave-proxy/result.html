@@ -98,7 +98,7 @@
           resultsDiv.innerHTML = results
             .map(
               (item) => `
-        <div class="result-card my-[20px] sm:my-[40px] mb-10">
+        <div class="result-card my-[20px] sm:my-[55px]">
           <div class="flex gap-4 items-center mb-[10px]">
             <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden p-1">
               <img 
@@ -170,26 +170,63 @@
           resultsDiv.innerHTML = results
             .map(
               (item) => `
-    <div class="flex gap-4 items-start mb-6">
-      <img src="${escapeHTML(
-        item.thumbnail?.src || ""
-      )}" class="w-24 h-24 object-cover" alt="Video Thumbnail" />
-      <div>
-        <a href="${escapeHTML(
-          item.url
-        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
-                item.title
-              )}">
-          ${escapeHTML(item.title)}
-        </a>
-        <p class="text-slate-600 text-sm mt-1">
-          Duration: ${item.duration || "Unknown"} · Source: ${escapeHTML(
-                item.meta_url?.hostname || ""
-              )}
-        </p>
-      </div>
-    </div>
-  `
+              <div class="result-card my-[20px] sm:my-[55px]">
+                  <div class="flex flex-col gap-4">
+                    <p class="text-sm text-white/80">
+                      <span class="font-medium">${escapeHTML(
+                        item.meta_url?.hostname || ""
+                      )}</span>
+                      <span class="px-2">${escapeHTML(
+                        item.meta_url?.path || ""
+                      )}</span>
+                    </p>
+                    <a href="${escapeHTML(item.url)}" target="_blank"
+                       class="text-lg md:text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer"
+                       aria-label="Visit ${escapeHTML(item.title)}">
+                      ${escapeHTML(item.title)}
+                    </a>
+                    <div class="flex gap-4">
+                      <a href="${escapeHTML(item?.url || "#")}" target="_blank"
+                         aria-label="Visit ${escapeHTML(
+                           item?.title || "thumbnail link"
+                         )}">
+                        ${
+                          item.thumbnail?.original
+                            ? `<img src="${escapeHTML(item.thumbnail.original)}"
+                                     alt="Thumbnail of ${escapeHTML(
+                                       item.title
+                                     )}"
+                                     class="rounded-[10px]" style="width: 300px; height: auto"
+                                     loading="lazy" />`
+                            : '<div class="w-[300px] h-32 bg-gray-500 rounded-[10px] flex items-center justify-center text-white/80">No thumbnail</div>'
+                        }
+                      </a>
+                      <div class="flex flex-col justify-between">
+                        <p class="text-[10px] sm:text-sm line-clamp-2 text-white/80">
+                          ${escapeHTML(
+                            item.description || "No description available"
+                          )}
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                          <span class="text-sm text-white/80">
+                            ${escapeHTML(
+                              item.video?.publisher || "Unknown publisher"
+                            )}
+                          </span>
+                          <span class="text-sm text-white/80">
+                            ${escapeHTML(
+                              item.video?.creator || "Unknown creator"
+                            )}
+                          </span>
+                          <span class="text-sm text-white/80">
+                            ${escapeHTML(item?.age || "N/A")}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `
             )
             .join("");
         } else if (filter === "news") {
@@ -320,9 +357,11 @@
       });
     </script>
   </head>
-  <body class="min-h-screen p-4">
+  <body class="min-h-screen px-[150px]">
     <section class="max-w-screen-2xl w-full mx-auto rounded-2xl shadow-sm p-4">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 top-0 z-50 fixed w-full"
+      >
         <img src="./assets/logo/fotise.png" alt="fotise logo" class="w-24" />
         <div
           class="flex w-full search-container rounded-lg bg-[#2F3035]/85 p-1"
