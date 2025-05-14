@@ -98,38 +98,44 @@
           resultsDiv.innerHTML = results
             .map(
               (item) => `
-    <div class="result-card my-[20px] sm:my-[55px]">
-      <div class="flex gap-4 items-center mb-[10px]">
-        <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden">
-          ${
-            item.thumbnail?.src
-              ? `<img src="${escapeHTML(
-                  item.thumbnail.src
-                )}" alt="thumbnail" class="w-[30px] h-[30px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] object-cover" />`
-              : ""
-          }
+        <div class="result-card my-[20px] sm:my-[40px] mb-10">
+          <div class="flex gap-4 items-center mb-[10px]">
+            <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden p-1">
+              <img 
+                src="${escapeHTML(
+                  item.profile?.img || item.thumbnail?.original || ""
+                )}" 
+                alt="${escapeHTML(item.profile?.name || "website icon")}" 
+                class="w-full h-full object-cover" 
+              />
+            </div>
+            <div>
+              <p class="text-[16px] font-semibold">${escapeHTML(
+                item.profile?.name || ""
+              )}</p>
+              <p class="text-sm mt-1 text-white/80" aria-label="URL details">
+                <span class="font-medium">${escapeHTML(
+                  item.meta_url?.hostname || ""
+                )}</span>
+                <span class="px-2">${escapeHTML(
+                  item.meta_url?.path || ""
+                )}</span>
+              </p>
+            </div>
+          </div>
+          <a 
+            href="${escapeHTML(item.url)}" 
+            target="_blank" 
+            class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" 
+            aria-label="Visit ${escapeHTML(item.title)}"
+          >
+            ${escapeHTML(item.title)}
+          </a>
+          <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
+            ${item.description || "No description available"}
+          </p>
         </div>
-        <div>
-          <p class="text-[16px] font-semibold">${escapeHTML(
-            item.profile?.name || ""
-          )}</p>
-          <p class="text-[14px]">${escapeHTML(
-            item.meta_url?.hostname || ""
-          )}</p>
-        </div>
-      </div>
-      <a href="${escapeHTML(
-        item.url
-      )}" target="_blank" class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" aria-label="Visit ${escapeHTML(
-                item.title
-              )}">
-        ${escapeHTML(item.title)}
-      </a>
-      <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
-        ${item.description}
-      </p>
-    </div>
-  `
+      `
             )
             .join("");
         } else if (filter === "images") {
@@ -151,7 +157,9 @@
           ${escapeHTML(item.title)}
         </a>
         <p class="text-slate-600 text-sm mt-1">
-          Source: ${escapeHTML(item.meta_url?.hostname || "")}
+          ${escapeHTML(item.meta_url?.hostname || "")} ${escapeHTML(
+                item.meta_url?.path || ""
+              )}
         </p>
       </div>
     </div>

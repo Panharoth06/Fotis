@@ -1,0 +1,804 @@
+{
+    "query": {
+        "original": "Pointer c++",
+        "show_strict_warning": false,
+        "is_navigational": false,
+        "is_news_breaking": false,
+        "spellcheck_off": true,
+        "country": "us",
+        "bad_results": false,
+        "should_fallback": false,
+        "postal_code": "",
+        "city": "",
+        "header_country": "",
+        "more_results_available": true,
+        "state": ""
+    },
+    "mixed": {
+        "type": "mixed",
+        "main": [
+            {
+                "type": "web",
+                "index": 0,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 1,
+                "all": false
+            },
+            {
+                "type": "videos",
+                "all": true
+            },
+            {
+                "type": "web",
+                "index": 2,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 3,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 4,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 5,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 6,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 7,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 8,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 9,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 10,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 11,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 12,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 13,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 14,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 15,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 16,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 17,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 18,
+                "all": false
+            },
+            {
+                "type": "web",
+                "index": 19,
+                "all": false
+            }
+        ],
+        "top": [],
+        "side": []
+    },
+    "type": "search",
+    "videos": {
+        "type": "videos",
+        "results": [
+            {
+                "type": "video_result",
+                "url": "https://www.youtube.com/watch?v=slzcWKWCMBg",
+                "title": "C++ pointers explained easy 👈 - YouTube",
+                "description": "C++ pointers tutorial example explained#C++ #pointers",
+                "age": "May 20, 2024",
+                "page_age": "2024-05-20T01:53:17",
+                "video": {
+                    "duration": "05:16",
+                    "views": 34595,
+                    "creator": "Bro Code",
+                    "publisher": "YouTube"
+                },
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "youtube.com",
+                    "hostname": "www.youtube.com",
+                    "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+                    "path": "› watch"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/SrM44baGGPLSmPWJqzalxXBSLFjTdSuE3dIvqZP8LvA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9z/bHpjV0tXQ01CZy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+                    "original": "https://i.ytimg.com/vi/slzcWKWCMBg/maxresdefault.jpg"
+                }
+            },
+            {
+                "type": "video_result",
+                "url": "https://www.youtube.com/watch?v=DTxHyVn0ODg",
+                "title": "POINTERS in C++ - YouTube",
+                "description": "Twitter ► https://twitter.com/thecherno Instagram ► https://instagram.com/thecherno Patreon ► https://patreon.com/thecherno Series Playlist ► https://www.you",
+                "age": "June 11, 2017",
+                "page_age": "2017-06-11T04:53:13",
+                "video": {
+                    "duration": "16:59",
+                    "views": 419776,
+                    "creator": "The Cherno",
+                    "publisher": "YouTube"
+                },
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "youtube.com",
+                    "hostname": "www.youtube.com",
+                    "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+                    "path": "› watch"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/tIYJXvRsXmI_Mj7Q_rwAmlqwmfVjws5jhfb_rLdx99U/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9E/VHhIeVZuME9EZy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+                    "original": "https://i.ytimg.com/vi/DTxHyVn0ODg/maxresdefault.jpg"
+                }
+            },
+            {
+                "type": "video_result",
+                "url": "https://www.youtube.com/watch?v=e2LMAgoqY_k&pp=ygUKI3B0cmJlYXV0eQ%3D%3D",
+                "title": "SMART POINTERS in C++ (for beginners in 20 minutes) - YouTube",
+                "description": "A smart pointer is a container/wrapper for a raw pointer. In modern C++ smart pointers are defined in the std namespace in the memory header file.One big adv...",
+                "age": "June 9, 2021",
+                "page_age": "2021-06-09T17:00:13",
+                "video": {
+                    "duration": "24:32",
+                    "views": 108247,
+                    "creator": "CodeBeauty",
+                    "publisher": "YouTube"
+                },
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "youtube.com",
+                    "hostname": "www.youtube.com",
+                    "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+                    "path": "› watch"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/XZRKTo7uTrLuAeNvqtEZie4I4by-ZCRmYCHxrCkK56g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9l/MkxNQWdvcVlfay9t/YXhyZXNkZWZhdWx0/LmpwZw",
+                    "original": "https://i.ytimg.com/vi/e2LMAgoqY_k/maxresdefault.jpg"
+                }
+            }
+        ],
+        "mutated_by_goggles": false
+    },
+    "web": {
+        "type": "search",
+        "results": [
+            {
+                "title": "C++ Pointers",
+                "url": "https://www.w3schools.com/cpp/cpp_pointers.asp",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "W3Schools offers free online tutorials, references and exercises in all the major languages of the web. Covering popular subjects like HTML, CSS, JavaScript, Python, SQL, Java, and many, many more.",
+                "profile": {
+                    "name": "W3Schools",
+                    "url": "https://www.w3schools.com/cpp/cpp_pointers.asp",
+                    "long_name": "w3schools.com",
+                    "img": "https://imgs.search.brave.com/D9KKNW7B_PBGo-trytMGRrRqvqMVW5Q5mDruXSPmBO4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjVlMGVkZDVj/ZGMyZWRmMzAwODRi/ZDAwZGE4NWI3NmU4/MjRhNjEzOGFhZWY3/ZGViMjY1OWY2ZDYw/YTZiOGUyZS93d3cu/dzNzY2hvb2xzLmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "w3schools.com",
+                    "hostname": "www.w3schools.com",
+                    "favicon": "https://imgs.search.brave.com/D9KKNW7B_PBGo-trytMGRrRqvqMVW5Q5mDruXSPmBO4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjVlMGVkZDVj/ZGMyZWRmMzAwODRi/ZDAwZGE4NWI3NmU4/MjRhNjEzOGFhZWY3/ZGViMjY1OWY2ZDYw/YTZiOGUyZS93d3cu/dzNzY2hvb2xzLmNv/bS8",
+                    "path": "› cpp  › cpp_pointers.asp"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/9mJENdKXrTwGf6-xbqPvs47GTLiuqxHqcFfNEei0o3w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dzNzY2hvb2xzLmNv/bS9pbWFnZXMvdzNz/Y2hvb2xzX2xvZ29f/NDM2XzIucG5n",
+                    "original": "https://www.w3schools.com/images/w3schools_logo_436_2.png",
+                    "logo": true
+                }
+            },
+            {
+                "title": "C++ Pointers | GeeksforGeeks",
+                "url": "https://www.geeksforgeeks.org/cpp-pointers/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "A pointer is <strong>a variable that stores the address of another variable</strong>. Pointers can be used with any data type, including basic types (e.g., int, char), arrays, and even user-defined types like classes and structures.",
+                "page_age": "2025-03-18T00:00:00",
+                "profile": {
+                    "name": "GeeksforGeeks",
+                    "url": "https://www.geeksforgeeks.org/cpp-pointers/",
+                    "long_name": "geeksforgeeks.org",
+                    "img": "https://imgs.search.brave.com/bGE5KD5Za34la_MeOAt7584d1aXRWEQopsXEQyAALPw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjBhOGQ3MmNi/ZWE5N2EwMmZjYzA1/ZTI0ZTFhMGUyMTE0/MGM0ZTBmMWZlM2Y2/Yzk2ODMxZTRhYTBi/NDdjYTE0OS93d3cu/Z2Vla3Nmb3JnZWVr/cy5vcmcv"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "video",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "geeksforgeeks.org",
+                    "hostname": "www.geeksforgeeks.org",
+                    "favicon": "https://imgs.search.brave.com/bGE5KD5Za34la_MeOAt7584d1aXRWEQopsXEQyAALPw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjBhOGQ3MmNi/ZWE5N2EwMmZjYzA1/ZTI0ZTFhMGUyMTE0/MGM0ZTBmMWZlM2Y2/Yzk2ODMxZTRhYTBi/NDdjYTE0OS93d3cu/Z2Vla3Nmb3JnZWVr/cy5vcmcv",
+                    "path": "› cpp-pointers"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/6kz3YBf5d_yFTBDueNiuPSAIM_5UP7AkDLpqDTJU_50/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMjEwMTMx/NjIyMzcvUG9pbnRl/cnNpbkMucG5n",
+                    "original": "https://media.geeksforgeeks.org/wp-content/uploads/20221013162237/PointersinC.png",
+                    "logo": false
+                },
+                "age": "March 18, 2025"
+            },
+            {
+                "title": "Pointers",
+                "url": "https://cplusplus.com/doc/tutorial/pointers/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Pointers are a very powerful feature of the language that has many uses in lower level programming. A bit later, we will see how to declare and use pointers. As just seen, <strong>a variable which stores the address of another variable</strong> is called a pointer. Pointers are said to &quot;point to&quot; the variable ...",
+                "profile": {
+                    "name": "Cplusplus",
+                    "url": "https://cplusplus.com/doc/tutorial/pointers/",
+                    "long_name": "cplusplus.com",
+                    "img": "https://imgs.search.brave.com/mEdOhYA9JyeRJga2b6CMFaG-k6ksTQAzgCqsdKWb8HQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTAyM2I0YjU0/YTM0NzVjYTllZmNj/MjRlNjllMzM1Yzcz/OWQ2ZTkwZjZmNjYx/ZjUxODdmZjNlZTZm/ODQzZjlkMS9jcGx1/c3BsdXMuY29tLw"
+                },
+                "language": "unk",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "cplusplus.com",
+                    "hostname": "cplusplus.com",
+                    "favicon": "https://imgs.search.brave.com/mEdOhYA9JyeRJga2b6CMFaG-k6ksTQAzgCqsdKWb8HQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTAyM2I0YjU0/YTM0NzVjYTllZmNj/MjRlNjllMzM1Yzcz/OWQ2ZTkwZjZmNjYx/ZjUxODdmZjNlZTZm/ODQzZjlkMS9jcGx1/c3BsdXMuY29tLw",
+                    "path": "› doc  › tutorial  › pointers"
+                }
+            },
+            {
+                "title": "r/learnprogramming on Reddit: What are pointers actually used for in C++?",
+                "url": "https://www.reddit.com/r/learnprogramming/comments/18b5x7l/what_are_pointers_actually_used_for_in_c/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "I&#x27;ve been developing stuff for about 4 years in other languages, but it was all in quite high level languages. I&#x27;ve recently been learning <strong>C++</strong>, and there&#x27;s a lot about <strong>pointers</strong>. I understand how they work, but what are they actually used for and when?",
+                "page_age": "2023-12-05T06:36:24",
+                "profile": {
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/r/learnprogramming/comments/18b5x7l/what_are_pointers_actually_used_for_in_c/",
+                    "long_name": "reddit.com",
+                    "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "reddit.com",
+                    "hostname": "www.reddit.com",
+                    "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+                    "path": "  › r/learnprogramming  › what are pointers actually used for in c++?"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/jl59PIXrynZ0yF-NzT9o7N6cPbn7jDCqz89VsGQrlf0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zaGFy/ZS5yZWRkLml0L3By/ZXZpZXcvcG9zdC8x/OGI1eDds",
+                    "original": "https://share.redd.it/preview/post/18b5x7l",
+                    "logo": false
+                },
+                "age": "December 5, 2023"
+            },
+            {
+                "title": "Pointers (C++) | Microsoft Learn",
+                "url": "https://learn.microsoft.com/en-us/cpp/cpp/pointers-cpp?view=msvc-170",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Access to this page requires authorization. You can try changing directories. ... A pointer is <strong>a variable that stores the memory address of an object</strong>.",
+                "page_age": "2021-08-02T00:00:00",
+                "profile": {
+                    "name": "Microsoft",
+                    "url": "https://learn.microsoft.com/en-us/cpp/cpp/pointers-cpp?view=msvc-170",
+                    "long_name": "learn.microsoft.com",
+                    "img": "https://imgs.search.brave.com/dKusAYBYTLeCBl16XSMYRZO-wCc_EyGpoH65Oj11tOU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmMzNjVjYjk4/NmJkODdmNTU4ZDU1/MGUwNjk0MWFmZWU0/NmYzZjVlYmZjZDIy/MWM4MGMwODc4MDhi/MDM5MmZkYy9sZWFy/bi5taWNyb3NvZnQu/Y29tLw"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "learn.microsoft.com",
+                    "hostname": "learn.microsoft.com",
+                    "favicon": "https://imgs.search.brave.com/dKusAYBYTLeCBl16XSMYRZO-wCc_EyGpoH65Oj11tOU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmMzNjVjYjk4/NmJkODdmNTU4ZDU1/MGUwNjk0MWFmZWU0/NmYzZjVlYmZjZDIy/MWM4MGMwODc4MDhi/MDM5MmZkYy9sZWFy/bi5taWNyb3NvZnQu/Y29tLw",
+                    "path": "› en-us  › cpp  › cpp  › pointers-cpp"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/KxEtqQiadL_R-Mr9_FffhMDYK3gVHrYWjuByaTLSjYg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sZWFy/bi5taWNyb3NvZnQu/Y29tL2VuLXVzL21l/ZGlhL29wZW4tZ3Jh/cGgtaW1hZ2UucG5n",
+                    "original": "https://learn.microsoft.com/en-us/media/open-graph-image.png",
+                    "logo": false
+                },
+                "age": "August 2, 2021"
+            },
+            {
+                "title": "Correct way of declaring pointer variables in C/C++ - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/6990726/correct-way-of-declaring-pointer-variables-in-c-c",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "I noticed some people use the following notation for declaring <strong>pointer</strong> variables. (a) char* p; instead of (b) char *p; I use (b). What is the rational behind the notation (a)? Notation (b) makes ...",
+                "profile": {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/6990726/correct-way-of-declaring-pointer-variables-in-c-c",
+                    "long_name": "stackoverflow.com",
+                    "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "stackoverflow.com",
+                    "hostname": "stackoverflow.com",
+                    "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+                    "path": "› questions  › 6990726  › correct-way-of-declaring-pointer-variables-in-c-c"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/4eF1Hc63ppYaxZ4e5vCKJVQtFhMkuzdk3kpY3MGOCjs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc3RhY2tv/dmVyZmxvdy9JbWcv/YXBwbGUtdG91Y2gt/aWNvbkAyLnBuZz92/PTczZDc5YTg5YmRl/ZA",
+                    "original": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+                    "logo": false
+                }
+            },
+            {
+                "title": "C++ Pointers (With Examples)",
+                "url": "https://www.programiz.com/cpp-programming/pointers",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Pointers are <strong>variables that store the memory addresses of other variables</strong>. In this tutorial, we will learn about pointers in C++ with the help of examples.",
+                "profile": {
+                    "name": "Programiz",
+                    "url": "https://www.programiz.com/cpp-programming/pointers",
+                    "long_name": "programiz.com",
+                    "img": "https://imgs.search.brave.com/sLWSVLS2Umji7yEuMboejjd09dYXJyxRdYtZmK0dgyM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGJlN2U1YjVi/Y2M3ZDU5OGMwMWNi/M2Q3YjhjOTM1ZTFk/Y2NkZjE4NGQwOGIx/MTQ4NjI2YmNhODVj/MzFkMmJhYy93d3cu/cHJvZ3JhbWl6LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "programiz.com",
+                    "hostname": "www.programiz.com",
+                    "favicon": "https://imgs.search.brave.com/sLWSVLS2Umji7yEuMboejjd09dYXJyxRdYtZmK0dgyM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGJlN2U1YjVi/Y2M3ZDU5OGMwMWNi/M2Q3YjhjOTM1ZTFk/Y2NkZjE4NGQwOGIx/MTQ4NjI2YmNhODVj/MzFkMmJhYy93d3cu/cHJvZ3JhbWl6LmNv/bS8",
+                    "path": "› cpp-programming  › pointers"
+                }
+            },
+            {
+                "title": "performance - Pointer vs Variable speed in C++ - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/6919380/pointer-vs-variable-speed-in-c",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "At a job interview I was asked the question &quot;In <strong>C++</strong> how do you access a variable faster, though the normal variable identifier or though a <strong>pointer</strong>&quot;. I must say I did not have a good technical answe...",
+                "profile": {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/6919380/pointer-vs-variable-speed-in-c",
+                    "long_name": "stackoverflow.com",
+                    "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "stackoverflow.com",
+                    "hostname": "stackoverflow.com",
+                    "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+                    "path": "› questions  › 6919380  › pointer-vs-variable-speed-in-c"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/4eF1Hc63ppYaxZ4e5vCKJVQtFhMkuzdk3kpY3MGOCjs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc3RhY2tv/dmVyZmxvdy9JbWcv/YXBwbGUtdG91Y2gt/aWNvbkAyLnBuZz92/PTczZDc5YTg5YmRl/ZA",
+                    "original": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+                    "logo": false
+                }
+            },
+            {
+                "title": "C++ pointer vs object - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/67765327/c-pointer-vs-object",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Could you please clear up a question for me regarding <strong>pointer</strong> vs object in <strong>C++</strong>. I have the below code that has a class called &quot;person&quot; and a list that allows for 100 objects of that class...",
+                "profile": {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/67765327/c-pointer-vs-object",
+                    "long_name": "stackoverflow.com",
+                    "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "stackoverflow.com",
+                    "hostname": "stackoverflow.com",
+                    "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+                    "path": "› questions  › 67765327  › c-pointer-vs-object"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/4eF1Hc63ppYaxZ4e5vCKJVQtFhMkuzdk3kpY3MGOCjs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc3RhY2tv/dmVyZmxvdy9JbWcv/YXBwbGUtdG91Y2gt/aWNvbkAyLnBuZz92/PTczZDc5YTg5YmRl/ZA",
+                    "original": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+                    "logo": false
+                }
+            },
+            {
+                "title": "r/cpp on Reddit: Why should I use pointers?",
+                "url": "https://www.reddit.com/r/cpp/comments/kx2xaj/why_should_i_use_pointers/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Passing <strong>pointers</strong> to objects around saves having to copy objects over and over. Typically, you won&#x27;t use raw <strong>pointers</strong> in most situations (smart <strong>pointers</strong> are your friend!), but there are some cases: in my experience, interfacing with older libraries and C code, in particular.",
+                "page_age": "2021-01-14T10:11:13",
+                "profile": {
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/r/cpp/comments/kx2xaj/why_should_i_use_pointers/",
+                    "long_name": "reddit.com",
+                    "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "reddit.com",
+                    "hostname": "www.reddit.com",
+                    "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+                    "path": "  › r/cpp  › why should i use pointers?"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+                    "original": "https://www.redditstatic.com/icon.png",
+                    "logo": false
+                },
+                "age": "January 14, 2021"
+            },
+            {
+                "title": "What exactly is a pointer? - C++ - Epic Developer Community Forums",
+                "url": "https://forums.unrealengine.com/t/what-exactly-is-a-pointer/44686",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Every time someone tries to explain it, I have no idea what they’re talking about. Could someone try and explain it as simply as possible? Maybe use an easy example/metaphor? So basically just don’t use big words …",
+                "page_age": "2015-10-14T18:20:05",
+                "profile": {
+                    "name": "Unrealengine",
+                    "url": "https://forums.unrealengine.com/t/what-exactly-is-a-pointer/44686",
+                    "long_name": "forums.unrealengine.com",
+                    "img": "https://imgs.search.brave.com/DA_wnbskyRpeq4HPMphQKQHfdlyiVrJD-CS2eN84eEM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzZjODQ4NTE1/ZTQ1OGQxMTI2NzUw/M2Q5MGJkMTk0MTUy/MjEzOTY0MDYwMmQy/MWIxNTE3NDkwNTFi/NGU1MmQzNS9mb3J1/bXMudW5yZWFsZW5n/aW5lLmNvbS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "article",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "forums.unrealengine.com",
+                    "hostname": "forums.unrealengine.com",
+                    "favicon": "https://imgs.search.brave.com/DA_wnbskyRpeq4HPMphQKQHfdlyiVrJD-CS2eN84eEM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzZjODQ4NTE1/ZTQ1OGQxMTI2NzUw/M2Q5MGJkMTk0MTUy/MjEzOTY0MDYwMmQy/MWIxNTE3NDkwNTFi/NGU1MmQzNS9mb3J1/bXMudW5yZWFsZW5n/aW5lLmNvbS8",
+                    "path": "  › development  › programming & scripting  › c++"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/SvdZuN4eRTdMqFbmUiegDI-Vk4H9yum0aMftO6R8DqQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kM2tq/bHVoNzNiOWg5by5j/bG91ZGZyb250Lm5l/dC9vcmlnaW5hbC80/WC80L2IvMi80YjI4/MGY2MzRiMDU2YzVl/ZjkyN2M1NWI5MjRj/MzQ4NTUwODI3ZjAy/LnBuZw",
+                    "original": "https://d3kjluh73b9h9o.cloudfront.net/original/4X/4/b/2/4b280f634b056c5ef927c55b924c348550827f02.png",
+                    "logo": false
+                },
+                "age": "October 14, 2015"
+            },
+            {
+                "title": "Why use pointers in C++? - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/20618843/why-use-pointers-in-c",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "I am learning <strong>C++</strong> from a game development standpoint coming from long time development in C# not related to gaming, but am having a fairly difficult time grasping the concept/use of <strong>pointers</strong> and de-",
+                "profile": {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/20618843/why-use-pointers-in-c",
+                    "long_name": "stackoverflow.com",
+                    "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "stackoverflow.com",
+                    "hostname": "stackoverflow.com",
+                    "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+                    "path": "› questions  › 20618843  › why-use-pointers-in-c"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/4eF1Hc63ppYaxZ4e5vCKJVQtFhMkuzdk3kpY3MGOCjs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc3RhY2tv/dmVyZmxvdy9JbWcv/YXBwbGUtdG91Y2gt/aWNvbkAyLnBuZz92/PTczZDc5YTg5YmRl/ZA",
+                    "original": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+                    "logo": false
+                }
+            },
+            {
+                "title": "C++ style: Stroustrup' s placement of pointer asterisks - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/61994573/c-style-stroustrup-s-placement-of-pointer-asterisks",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Does anyone know why Stroustrup&#x27;s style is the placement of <strong>pointers</strong> as follows? Specifically, what Stroustrup has provided for guidance about this matter? int* p; vs int *p; because declaring",
+                "profile": {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/61994573/c-style-stroustrup-s-placement-of-pointer-asterisks",
+                    "long_name": "stackoverflow.com",
+                    "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "stackoverflow.com",
+                    "hostname": "stackoverflow.com",
+                    "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+                    "path": "› questions  › 61994573  › c-style-stroustrup-s-placement-of-pointer-asterisks"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/4eF1Hc63ppYaxZ4e5vCKJVQtFhMkuzdk3kpY3MGOCjs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc3RhY2tv/dmVyZmxvdy9JbWcv/YXBwbGUtdG91Y2gt/aWNvbkAyLnBuZz92/PTczZDc5YTg5YmRl/ZA",
+                    "original": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+                    "logo": false
+                }
+            },
+            {
+                "title": "Pointer declaration - cppreference.com",
+                "url": "https://en.cppreference.com/w/cpp/language/pointer",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Indirection through an invalid <strong>pointer</strong> value and passing an invalid <strong>pointer</strong> value to a deallocation function have undefined behavior. Any other use of an invalid <strong>pointer</strong> value has implementation-defined behavior. Some implementations might define that copying an invalid <strong>pointer</strong> value causes ...",
+                "page_age": "2025-03-18T00:00:00",
+                "profile": {
+                    "name": "Cppreference",
+                    "url": "https://en.cppreference.com/w/cpp/language/pointer",
+                    "long_name": "en.cppreference.com",
+                    "img": "https://imgs.search.brave.com/HrckHifmCVpfGJh7Ripuctqym8DiZTyApoZVTLjfVyg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDI0NDAxNDc3/NzhkNjEzZWM1NzUw/OTI4MmNhYmFiYzZj/NDcxOTNhOWJhYzY0/ZjlhZDFmOWM1Yjc2/MDk3ODRjYS9lbi5j/cHByZWZlcmVuY2Uu/Y29tLw"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "en.cppreference.com",
+                    "hostname": "en.cppreference.com",
+                    "favicon": "https://imgs.search.brave.com/HrckHifmCVpfGJh7Ripuctqym8DiZTyApoZVTLjfVyg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDI0NDAxNDc3/NzhkNjEzZWM1NzUw/OTI4MmNhYmFiYzZj/NDcxOTNhOWJhYzY0/ZjlhZDFmOWM1Yjc2/MDk3ODRjYS9lbi5j/cHByZWZlcmVuY2Uu/Y29tLw",
+                    "path": "› w  › cpp  › language  › pointer"
+                },
+                "age": "March 18, 2025"
+            },
+            {
+                "title": "Printing pointer's address - C++ Forum",
+                "url": "https://cplusplus.com/forum/beginner/224608/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "My professor has asked us to create a program that uses a <strong>pointer</strong> and will print the value of the <strong>pointer</strong> and the address of the variable. I&#x27;ve written what I think will give the correct address but I don&#x27;t know how to check it and make sure its giving me the correct address.",
+                "profile": {
+                    "name": "Cplusplus",
+                    "url": "https://cplusplus.com/forum/beginner/224608/",
+                    "long_name": "cplusplus.com",
+                    "img": "https://imgs.search.brave.com/mEdOhYA9JyeRJga2b6CMFaG-k6ksTQAzgCqsdKWb8HQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTAyM2I0YjU0/YTM0NzVjYTllZmNj/MjRlNjllMzM1Yzcz/OWQ2ZTkwZjZmNjYx/ZjUxODdmZjNlZTZm/ODQzZjlkMS9jcGx1/c3BsdXMuY29tLw"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "cplusplus.com",
+                    "hostname": "cplusplus.com",
+                    "favicon": "https://imgs.search.brave.com/mEdOhYA9JyeRJga2b6CMFaG-k6ksTQAzgCqsdKWb8HQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTAyM2I0YjU0/YTM0NzVjYTllZmNj/MjRlNjllMzM1Yzcz/OWQ2ZTkwZjZmNjYx/ZjUxODdmZjNlZTZm/ODQzZjlkMS9jcGx1/c3BsdXMuY29tLw",
+                    "path": "› forum  › beginner  › 224608"
+                }
+            },
+            {
+                "title": "Standard C++",
+                "url": "https://isocpp.org/wiki/faq/references",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Here i and j are aliases for main’s x and y respectively. In other words, i is x — not a <strong>pointer</strong> to x, nor a copy of x, but x itself. Anything you do to i gets done to x, and vice versa. This includes taking the address of it.",
+                "profile": {
+                    "name": "Isocpp",
+                    "url": "https://isocpp.org/wiki/faq/references",
+                    "long_name": "isocpp.org",
+                    "img": "https://imgs.search.brave.com/ftKf4X16fck-Z48fnvG-TZyYI5XSISd7iXrjwh9CmKs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjM0MWVmOTc2/MzlkNWY4YTA0NTU1/Yjg1ZDVjZWExNDMz/YTZhY2EwZGZhODE5/NjdiYWJkODM2NWNk/NmZiMjMwNi9pc29j/cHAub3JnLw"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "isocpp.org",
+                    "hostname": "isocpp.org",
+                    "favicon": "https://imgs.search.brave.com/ftKf4X16fck-Z48fnvG-TZyYI5XSISd7iXrjwh9CmKs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjM0MWVmOTc2/MzlkNWY4YTA0NTU1/Yjg1ZDVjZWExNDMz/YTZhY2EwZGZhODE5/NjdiYWJkODM2NWNk/NmZiMjMwNi9pc29j/cHAub3JnLw",
+                    "path": "› wiki  › faq  › references"
+                }
+            },
+            {
+                "title": "C++ POINTERS (2025) - Introduction to C++ pointers (for beginners) PROGRAMMING TUTORIAL - YouTube",
+                "url": "https://www.youtube.com/watch?v=eNofmKYzje4&pp=ygUII3VpbnRwdHI%3D",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "A <strong>pointer</strong> is a variable that stores an address. <strong>Pointers</strong> <strong>in</strong> <strong>C++</strong> have many uses, and in the next few videos, I&#x27;ll explain the most important ones. This is an ...",
+                "page_age": "2020-09-23T16:18:09",
+                "profile": {
+                    "name": "YouTube",
+                    "url": "https://www.youtube.com/watch?v=eNofmKYzje4&pp=ygUII3VpbnRwdHI%3D",
+                    "long_name": "youtube.com",
+                    "img": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "video",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "youtube.com",
+                    "hostname": "www.youtube.com",
+                    "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+                    "path": "  › codebeauty"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/puTxkVKlW6ZcsMfzUcpQPgqoF24-P6qNoBqMvDgbprs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9l/Tm9mbUtZemplNC9t/YXhyZXNkZWZhdWx0/LmpwZw",
+                    "original": "https://i.ytimg.com/vi/eNofmKYzje4/maxresdefault.jpg",
+                    "logo": false
+                },
+                "age": "September 23, 2020"
+            },
+            {
+                "title": "C++ POINTERS FULL COURSE Beginner to Advanced (Learn C++ Pointers in 2,5 hours) - YouTube",
+                "url": "https://www.youtube.com/watch?v=kiUGf_Z08RQ&pp=ygULI3BvaW50ZXJjcHA%3D",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "This is a full <strong>C++</strong> <strong>Pointers</strong> course. It&#x27;ll teach you the most important from beginner to advanced <strong>pointer</strong> topics.In this course, you will learn the basics of ...",
+                "page_age": "2021-07-21T16:05:30",
+                "profile": {
+                    "name": "YouTube",
+                    "url": "https://www.youtube.com/watch?v=kiUGf_Z08RQ&pp=ygULI3BvaW50ZXJjcHA%3D",
+                    "long_name": "youtube.com",
+                    "img": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "video",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "youtube.com",
+                    "hostname": "www.youtube.com",
+                    "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+                    "path": "  › codebeauty"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/XjDdsZPqXcsbfw1DxhdKdJHPij7qaR5OpqudjNDMFMw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9r/aVVHZl9aMDhSUS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+                    "original": "https://i.ytimg.com/vi/kiUGf_Z08RQ/maxresdefault.jpg",
+                    "logo": false
+                },
+                "age": "July 21, 2021"
+            },
+            {
+                "title": "Learning C++ Pointers for REAL Dummies",
+                "url": "http://alumni.cs.ucr.edu/~pdiloren/C++_Pointers/",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "Hello and welcome to &quot;Learning <strong>C++</strong> <strong>Pointers</strong> for REAL Dummies.&quot; This website was created by Paul DiLorenzo to fill the void of an easy understanding learning module for <strong>pointers</strong> · Here are some rave reviews from people around the world:",
+                "profile": {
+                    "name": "Ucr",
+                    "url": "http://alumni.cs.ucr.edu/~pdiloren/C++_Pointers/",
+                    "long_name": "alumni.cs.ucr.edu",
+                    "img": "https://imgs.search.brave.com/55fyKGr9hWOXtnyJ0Wm-7FvIY5hQquT7Rx65E1MJsoM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTg2MGViZDJj/YmM1NDk1YTRmZTIz/M2JhZDA2MjQ5MDM3/MmZiYWVmNzFkNWU2/MDdjNWY2Y2YxYzBl/MDg5Yzk5NS9hbHVt/bmkuY3MudWNyLmVk/dS8"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "generic",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "http",
+                    "netloc": "alumni.cs.ucr.edu",
+                    "hostname": "alumni.cs.ucr.edu",
+                    "favicon": "https://imgs.search.brave.com/55fyKGr9hWOXtnyJ0Wm-7FvIY5hQquT7Rx65E1MJsoM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTg2MGViZDJj/YmM1NDk1YTRmZTIz/M2JhZDA2MjQ5MDM3/MmZiYWVmNzFkNWU2/MDdjNWY2Y2YxYzBl/MDg5Yzk5NS9hbHVt/bmkuY3MudWNyLmVk/dS8",
+                    "path": "› ~pdiloren  › C++_Pointers"
+                }
+            },
+            {
+                "title": "I never use pointers in my C++ code. Am I coding C++ wrong? - Software Engineering Stack Exchange",
+                "url": "https://softwareengineering.stackexchange.com/questions/410595/i-never-use-pointers-in-my-c-code-am-i-coding-c-wrong",
+                "is_source_local": false,
+                "is_source_both": false,
+                "description": "This question may sound strange to you, but I am learning <strong>C++</strong> all by myself. I have nobody whom I could ask for mentoring and I would be very glad for some advice. I have started recently to progr...",
+                "page_age": "2020-05-25T00:00:00",
+                "profile": {
+                    "name": "Stack Exchange",
+                    "url": "https://softwareengineering.stackexchange.com/questions/410595/i-never-use-pointers-in-my-c-code-am-i-coding-c-wrong",
+                    "long_name": "softwareengineering.stackexchange.com",
+                    "img": "https://imgs.search.brave.com/5AWQHT57k-Pq-o9Wxn25-hiktnz9ykHtGrXjELmAabY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWM2Y2MzMTFi/ZTgwMTRlOWYxZGFk/YjA5YzRkZTM0MzY3/MzI0NDEyMGY0OGUw/NWJmOThiMTY0OTVk/Y2Y1Mzc5Ni9zb2Z0/d2FyZWVuZ2luZWVy/aW5nLnN0YWNrZXhj/aGFuZ2UuY29tLw"
+                },
+                "language": "en",
+                "family_friendly": true,
+                "type": "search_result",
+                "subtype": "qa",
+                "is_live": false,
+                "meta_url": {
+                    "scheme": "https",
+                    "netloc": "softwareengineering.stackexchange.com",
+                    "hostname": "softwareengineering.stackexchange.com",
+                    "favicon": "https://imgs.search.brave.com/5AWQHT57k-Pq-o9Wxn25-hiktnz9ykHtGrXjELmAabY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWM2Y2MzMTFi/ZTgwMTRlOWYxZGFk/YjA5YzRkZTM0MzY3/MzI0NDEyMGY0OGUw/NWJmOThiMTY0OTVk/Y2Y1Mzc5Ni9zb2Z0/d2FyZWVuZ2luZWVy/aW5nLnN0YWNrZXhj/aGFuZ2UuY29tLw",
+                    "path": "› questions  › 410595  › i-never-use-pointers-in-my-c-code-am-i-coding-c-wrong"
+                },
+                "thumbnail": {
+                    "src": "https://imgs.search.brave.com/ySJ1mvw0wz7M5dYRn-c8iRz7TuXCx7V27HnqSAtSeo4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c3N0YXRpYy5uZXQv/U2l0ZXMvc29mdHdh/cmVlbmdpbmVlcmlu/Zy9JbWcvYXBwbGUt/dG91Y2gtaWNvbkAy/LnBuZz92PTFlZjcz/NjNmZWJiYQ",
+                    "original": "https://cdn.sstatic.net/Sites/softwareengineering/Img/apple-touch-icon@2.png?v=1ef7363febba",
+                    "logo": false
+                },
+                "age": "May 25, 2020"
+            }
+        ],
+        "family_friendly": true
+    }
+}
