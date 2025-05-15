@@ -44,7 +44,6 @@
       .underline-animate:hover::after {
         transform: scaleX(1);
       }
-      /* Add grid styling for images */
       .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -58,7 +57,6 @@
     </style>
 
     <script>
-      // Common helper functions and constants
       function escapeHTML(str) {
         if (!str) return "";
         return str
@@ -72,7 +70,6 @@
       let selectedFilter = "web"; // Default filter
       const API_BASE_URL = "http://localhost:5500";
 
-      // URL parameter handling
       function getURLParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
@@ -93,15 +90,15 @@
           btn.classList.toggle("bg-transparent", btn.dataset.filter !== filter);
         });
 
-        // If there's a query in the search box, update the URL with the new filter
+        
         const query = document.getElementById("searchInput").value;
         if (query && query.trim().length >= 2) {
           updateURLWithSearch(query, filter);
-          searchBrave(); // Optional: search immediately when filter changes
+          searchBrave(); 
         }
       }
 
-      // Common elements for rendering
+      
       function getUrlDisplay(item) {
         if (!item.meta_url) return "";
         return `
@@ -112,7 +109,7 @@
         `;
       }
 
-      // Template functions for different result types
+    
       function renderWebResult(item) {
         return `
           <div class="result-card my-[20px] sm:my-[55px]">
@@ -272,7 +269,7 @@
     </div>
   `;
 }
-      // Main render function that uses the appropriate template based on filter
+    
       function renderResults(results, filter, resultsDiv) {
         resultsDiv.innerHTML = "";
 
@@ -281,13 +278,11 @@
           return;
         }
 
-        // Special handling for image results with grid layout
+        // image results with grid layout
         if (filter === "images") {
-          // Create a proper grid container with the right classes
           const gridContainer = document.createElement("div");
-          gridContainer.className = "image-grid rounded-lg"; // Using our custom CSS class
+          gridContainer.className = "image-grid rounded-lg"; 
 
-          // Add each image to the grid
           results.forEach((item) => {
             const imageUrl =
               item.properties?.url ||
@@ -328,14 +323,12 @@
           return;
         }
 
-        // For other result types, use the standard approach
         const renderFunctions = {
           web: renderWebResult,
           videos: renderVideoResult,
           news: renderNewsResult,
         };
 
-        // Use the appropriate render function based on filter
         const renderFunction = renderFunctions[filter];
         if (renderFunction) {
           resultsDiv.innerHTML = results.map(renderFunction).join("");
@@ -377,14 +370,13 @@
               return response.json();
             })
             .then((data) => {
-              console.log("Search results:", data); // Debug log to see the response structure
+              // console.log("Search results:", data); 
 
               let results;
               if (selectedFilter === "web") {
                 results = data.web?.results || [];
               } else {
                 results = data.results || [];
-                // Log first result for debugging
                 if (results.length > 0) {
                   console.log("First result item:", results[0]);
                 }

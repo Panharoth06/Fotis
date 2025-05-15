@@ -17,7 +17,6 @@ app.get("/search", async (req, res) => {
 
   if (!query) return res.status(400).json({ error: "Missing query" });
 
-  // Map filter types to Brave API endpoints
   const endpoints = {
     web: `https://api.search.brave.com/res/v1/web/search`,
     images: `https://api.search.brave.com/res/v1/images/search`,
@@ -25,7 +24,7 @@ app.get("/search", async (req, res) => {
     news: `https://api.search.brave.com/res/v1/news/search`,
   };
 
-  const endpoint = endpoints[type] || endpoints.web; // Fallback to web
+  const endpoint = endpoints[type] || endpoints.web; 
 
   try {
     const response = await fetch(`${endpoint}?q=${encodeURIComponent(query)}`, {
@@ -40,7 +39,7 @@ app.get("/search", async (req, res) => {
       const errorText = await response.text();
       return res
         .status(response.status)
-        .json({ error: "Brave API request failed", details: errorText });
+        .json({ error: "API request failed", details: errorText });
     }
 
     const data = await response.json();
