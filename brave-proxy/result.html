@@ -44,10 +44,23 @@
       .underline-animate:hover::after {
         transform: scaleX(1);
       }
+      /* Add grid styling for images */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      @media (min-width: 768px) {
+        .image-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
     </style>
 
     <script>
+      // Common helper functions and constants
       function escapeHTML(str) {
+        if (!str) return '';
         return str
           .replace(/&/g, "&amp;")
           .replace(/</g, "&lt;")
@@ -59,13 +72,12 @@
       let selectedFilter = "web"; // Default filter
       const API_BASE_URL = "http://localhost:5500";
 
-      // Function to get URL parameters
+      // URL parameter handling
       function getURLParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
       }
 
-      // Function to update URL with search parameters
       function updateURLWithSearch(query, filter) {
         const url = new URL(window.location);
         url.searchParams.set("q", query);
@@ -73,9 +85,11 @@
         window.history.pushState({}, "", url);
       }
 
+      // Filter handling
       function setFilter(filter) {
         selectedFilter = filter;
         document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.toggle("bg-orange-500", btn.dataset.filter === filter);
           btn.classList.toggle("bg-transparent", btn.dataset.filter !== filter);
         });
 
@@ -87,186 +101,203 @@
         }
       }
 
+      // Common elements for rendering
+      function getUrlDisplay(item) {
+        if (!item.meta_url) return '';
+        return `
+          <span class="font-medium">${escapeHTML(item.meta_url?.hostname || "")}</span>
+          <span class="px-2">${escapeHTML(item.meta_url?.path || "")}</span>
+        `;
+      }
+
+      // Template functions for different result types
+      function renderWebResult(item) {
+        return `
+          <div class="result-card my-[20px] sm:my-[55px]">
+            <div class="flex gap-4 items-center mb-[10px]">
+              <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden p-1">
+                <img 
+                  src="${escapeHTML(item.profile?.img || item.thumbnail?.original || "")}" 
+                  alt="${escapeHTML(item.profile?.name || "website icon")}" 
+                  class="w-full h-full object-cover" 
+                />
+              </div>
+              <div>
+                <p class="text-[16px] font-semibold">${escapeHTML(item.profile?.name || "")}</p>
+                <p class="text-sm mt-1 text-white/80" aria-label="URL details">
+                  ${getUrlDisplay(item)}
+                </p>
+              </div>
+            </div>
+            <a 
+              href="${escapeHTML(item.url)}" 
+              target="_blank" 
+              class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" 
+              aria-label="Visit ${escapeHTML(item.title)}"
+            >
+              ${escapeHTML(item.title)}
+            </a>
+            <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
+              ${item.description || "No description available"}
+            </p>
+          </div>
+        `;
+      }
+
+      function renderImageResult(item) {
+        const imageUrl = escapeHTML(item.properties?.url || item.properties?.thumbnail?.src || item.thumbnail?.src || "");
+        return `
+          <div class="rounded-lg overflow-hidden h-full">
+            <a href="${escapeHTML(item.url)}" target="_blank" aria-label="Visit ${escapeHTML(item.title || 'Image')}">
+              <img src="${imageUrl}" alt="${escapeHTML(item.title || 'Image')}" 
+                   class="w-full h-48 object-cover rounded-t-lg hover:opacity-90 transition-opacity" />
+            </a>
+            <div class="p-2 bg-[#2F3035] rounded-t-lg">
+              <a href="${escapeHTML(item.url)}" target="_blank" 
+                 class="text-[#7799E5] hover:underline text-sm font-medium line-clamp-1" 
+                 aria-label="Visit ${escapeHTML(item.title || 'Image')}">
+                ${escapeHTML(item.title || 'Image')}
+              </a>
+              <p class="text-white/60 text-xs mt-1 line-clamp-1">
+                ${item.meta_url ? getUrlDisplay(item) : (item.source || '')}
+              </p>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderVideoResult(item) {
+        return `
+          <div class="result-card my-[20px] sm:my-[55px]">
+            <div class="flex flex-col">
+              <p class="text-sm text-white/80">
+                ${getUrlDisplay(item)}
+              </p>
+              <a href="${escapeHTML(item.url)}" target="_blank"
+                class="text-lg md:text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer"
+                aria-label="Visit ${escapeHTML(item.title)}">
+                ${escapeHTML(item.title)}
+              </a>
+              <div class="flex gap-4">
+                <a href="${escapeHTML(item?.url || "#")}" target="_blank"
+                  aria-label="Visit ${escapeHTML(item?.title || "thumbnail link")}">
+                  ${
+                    item.thumbnail?.original
+                      ? `<img src="${escapeHTML(item.thumbnail.original)}"
+                              alt="Thumbnail of ${escapeHTML(item.title)}"
+                              class="rounded-[10px]" style="width: 430px; height: auto"
+                              loading="lazy" />`
+                      : '<div class="w-[300px] h-32 bg-gray-500 rounded-[10px] flex items-center justify-center text-white/80">No thumbnail</div>'
+                  }
+                </a>
+                <div class="flex flex-col justify-between">
+                  <p class="text-[10px] sm:text-sm line-clamp-2 text-white/80">
+                    ${escapeHTML(item.description || "No description available")}
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                    <span class="text-sm text-white/80">
+                      ${escapeHTML(item.video?.publisher || "Unknown publisher")}
+                    </span>
+                    <span class="text-sm text-white/80">
+                      ${escapeHTML(item.video?.creator || "Unknown creator")}
+                    </span>
+                    <span class="text-sm text-white/80">
+                      ${escapeHTML(item?.age || "N/A")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderNewsResult(item) {
+        return `
+          <div class="flex gap-4 items-start mb-6">
+            <img src="${escapeHTML(item.thumbnail?.src || "")}" class="w-24 h-24 object-cover" alt="News Thumbnail" />
+            <div>
+              <a href="${escapeHTML(item.url)}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(item.title)}">
+                ${escapeHTML(item.title)}
+              </a>
+              <p class="text-slate-600 text-sm mt-1">
+                ${escapeHTML(item.description || "")} · Published: ${item.published_date || "Unknown"}
+              </p>
+            </div>
+          </div>
+        `;
+      }
+
+      // Main render function that uses the appropriate template based on filter
       function renderResults(results, filter, resultsDiv) {
         resultsDiv.innerHTML = "";
+        
         if (!results || results.length === 0) {
           resultsDiv.innerHTML = "No results found.";
           return;
         }
 
-        if (filter === "web") {
-          resultsDiv.innerHTML = results
-            .map(
-              (item) => `
-        <div class="result-card my-[20px] sm:my-[55px]">
-          <div class="flex gap-4 items-center mb-[10px]">
-            <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden p-1">
-              <img 
-                src="${escapeHTML(
-                  item.profile?.img || item.thumbnail?.original || ""
-                )}" 
-                alt="${escapeHTML(item.profile?.name || "website icon")}" 
-                class="w-full h-full object-cover" 
-              />
-            </div>
-            <div>
-              <p class="text-[16px] font-semibold">${escapeHTML(
-                item.profile?.name || ""
-              )}</p>
-              <p class="text-sm mt-1 text-white/80" aria-label="URL details">
-                <span class="font-medium">${escapeHTML(
-                  item.meta_url?.hostname || ""
-                )}</span>
-                <span class="px-2">${escapeHTML(
-                  item.meta_url?.path || ""
-                )}</span>
-              </p>
-            </div>
-          </div>
-          <a 
-            href="${escapeHTML(item.url)}" 
-            target="_blank" 
-            class="text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer" 
-            aria-label="Visit ${escapeHTML(item.title)}"
-          >
-            ${escapeHTML(item.title)}
-          </a>
-          <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
-            ${item.description || "No description available"}
-          </p>
-        </div>
-      `
-            )
-            .join("");
-        } else if (filter === "images") {
-          resultsDiv.innerHTML = results
-            .map(
-              (item) => `
-    <div class="flex gap-4 mb-6">
-      <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px] overflow-hidden flex justify-center items-center">
-        <img src="${escapeHTML(
-          item.thumbnail.src
-        )}" alt="thumbnail" class="mx-auto w-full h-full rounded-[10px] sm:rounded-[20px] object-cover" />
-      </div>
-      <div>
-        <a href="${escapeHTML(
-          item.url
-        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
-                item.title
-              )}">
-          ${escapeHTML(item.title)}
-        </a>
-        <p class="text-slate-600 text-sm mt-1">
-          ${escapeHTML(item.meta_url?.hostname || "")} ${escapeHTML(
-                item.meta_url?.path || ""
-              )}
-        </p>
-      </div>
-    </div>
-  `
-            )
-            .join("");
-        } else if (filter === "videos") {
-          resultsDiv.innerHTML = results
-            .map(
-              (item) => `
-              <div class="result-card my-[20px] sm:my-[55px]">
-                  <div class="flex flex-col gap-4">
-                    <p class="text-sm text-white/80">
-                      <span class="font-medium">${escapeHTML(
-                        item.meta_url?.hostname || ""
-                      )}</span>
-                      <span class="px-2">${escapeHTML(
-                        item.meta_url?.path || ""
-                      )}</span>
-                    </p>
-                    <a href="${escapeHTML(item.url)}" target="_blank"
-                       class="text-lg md:text-xl text-[#7799E5] font-medium no-underline hover:underline hover:cursor-pointer"
-                       aria-label="Visit ${escapeHTML(item.title)}">
-                      ${escapeHTML(item.title)}
-                    </a>
-                    <div class="flex gap-4">
-                      <a href="${escapeHTML(item?.url || "#")}" target="_blank"
-                         aria-label="Visit ${escapeHTML(
-                           item?.title || "thumbnail link"
-                         )}">
-                        ${
-                          item.thumbnail?.original
-                            ? `<img src="${escapeHTML(item.thumbnail.original)}"
-                                     alt="Thumbnail of ${escapeHTML(
-                                       item.title
-                                     )}"
-                                     class="rounded-[10px]" style="width: 300px; height: auto"
-                                     loading="lazy" />`
-                            : '<div class="w-[300px] h-32 bg-gray-500 rounded-[10px] flex items-center justify-center text-white/80">No thumbnail</div>'
-                        }
-                      </a>
-                      <div class="flex flex-col justify-between">
-                        <p class="text-[10px] sm:text-sm line-clamp-2 text-white/80">
-                          ${escapeHTML(
-                            item.description || "No description available"
-                          )}
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 mt-2">
-                          <span class="text-sm text-white/80">
-                            ${escapeHTML(
-                              item.video?.publisher || "Unknown publisher"
-                            )}
-                          </span>
-                          <span class="text-sm text-white/80">
-                            ${escapeHTML(
-                              item.video?.creator || "Unknown creator"
-                            )}
-                          </span>
-                          <span class="text-sm text-white/80">
-                            ${escapeHTML(item?.age || "N/A")}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              `
-            )
-            .join("");
-        } else if (filter === "news") {
-          resultsDiv.innerHTML = results
-            .map(
-              (item) => `
-    <div class="flex gap-4 items-start mb-6">
-      <img src="${escapeHTML(
-        item.thumbnail?.src || ""
-      )}" class="w-24 h-24 object-cover" alt="News Thumbnail" />
-      <div>
-        <a href="${escapeHTML(
-          item.url
-        )}" target="_blank" class="text-blue-500 hover:underline text-lg font-medium" aria-label="Visit ${escapeHTML(
-                item.title
-              )}">
-          ${escapeHTML(item.title)}
-        </a>
-        <p class="text-slate-600 text-sm mt-1">
-          ${escapeHTML(item.description || "")} · Published: ${
-                item.published_date || "Unknown"
-              }
-        </p>
-      </div>
-    </div>
-  `
-            )
-            .join("");
+        // Special handling for image results with grid layout
+        if (filter === "images") {
+          // Create a proper grid container with the right classes
+          const gridContainer = document.createElement('div');
+          gridContainer.className = "image-grid rounded-lg"; // Using our custom CSS class
+          
+          // Add each image to the grid
+          results.forEach(item => {
+            const imageUrl = item.properties?.url || item.properties?.thumbnail?.src || item.thumbnail?.src || "";
+            
+            const imageCard = document.createElement('div');
+            imageCard.className = "rounded-lg overflow-hidden h-full";
+            
+            imageCard.innerHTML = `
+              <a href="${escapeHTML(item.url)}" target="_blank" aria-label="Visit ${escapeHTML(item.title || 'Image')}">
+                <img src="${escapeHTML(imageUrl)}" alt="${escapeHTML(item.title || 'Image')}" 
+                     class="w-full h-48 object-cover rounded-t-lg hover:opacity-90 transition-opacity" />
+              </a>
+              <div class="p-2 bg-[#2F3035] rounded-b-lg">
+                <a href="${escapeHTML(item.url)}" target="_blank" 
+                   class="text-[#7799E5] hover:underline text-sm font-medium line-clamp-1" 
+                   aria-label="Visit ${escapeHTML(item.title || 'Image')}">
+                  ${escapeHTML(item.title || 'Image')}
+                </a>
+                <p class="text-white/60 text-xs mt-1 line-clamp-1">
+                  ${item.meta_url ? getUrlDisplay(item) : (item.source || '')}
+                </p>
+              </div>
+            `;
+            
+            gridContainer.appendChild(imageCard);
+          });
+          
+          resultsDiv.appendChild(gridContainer);
+          return;
+        }
+
+        // For other result types, use the standard approach
+        const renderFunctions = {
+          web: renderWebResult,
+          videos: renderVideoResult,
+          news: renderNewsResult
+        };
+
+        // Use the appropriate render function based on filter
+        const renderFunction = renderFunctions[filter];
+        if (renderFunction) {
+          resultsDiv.innerHTML = results.map(renderFunction).join("");
+        } else {
+          resultsDiv.innerHTML = "Invalid filter type.";
         }
       }
 
-      async function searchBrave() {
-        console.log("Search triggered by:", new Error().stack);
+      // Search function
+      function searchBrave() {
         const query = document.getElementById("searchInput").value;
         const resultsDiv = document.getElementById("results");
-        const button = document.querySelector("button");
+        const button = document.getElementById("searchButton");
 
         if (!query.trim() || query.length < 2) {
-          resultsDiv.innerHTML =
-            "Please enter a valid search query (minimum 2 characters).";
+          resultsDiv.innerHTML = "Please enter a valid search query (minimum 2 characters).";
           return;
         }
 
@@ -277,37 +308,48 @@
         resultsDiv.innerHTML = `<div class="flex justify-center"><div class="spinner">Loading...</div></div>`;
 
         try {
-          const response = await fetch(
-            `${API_BASE_URL}/search?q=${encodeURIComponent(
-              query
-            )}&type=${selectedFilter}`
-          );
+          fetch(`${API_BASE_URL}/search?q=${encodeURIComponent(query)}&type=${selectedFilter}`)
+            .then(response => {
+              if (!response.ok) {
+                return response.json().then(error => {
+                  throw new Error(error.error || "Failed to fetch results.");
+                });
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log("Search results:", data); // Debug log to see the response structure
+              
+              let results;
+              if (selectedFilter === "web") {
+                results = data.web?.results || [];
+              } else {
+                results = data.results || [];
+                // Log first result for debugging
+                if (results.length > 0) {
+                  console.log("First result item:", results[0]);
+                }
+              }
+              
+              // Save the results for later use
+              localStorage.setItem("lastResults", JSON.stringify(results));
+              localStorage.setItem("lastFilter", selectedFilter);
 
-          if (!response.ok) {
-            const error = await response.json();
-            resultsDiv.innerHTML = `Error: ${
-              error.error || "Failed to fetch results."
-            }`;
-            return;
-          }
-
-          const data = await response.json();
-          const results =
-            selectedFilter === "web"
-              ? data.web?.results || []
-              : data.results || [];
-          localStorage.setItem("lastResults", JSON.stringify(results));
-          localStorage.setItem("lastFilter", selectedFilter);
-
-          renderResults(results, selectedFilter, resultsDiv);
+              renderResults(results, selectedFilter, resultsDiv);
+            })
+            .catch(err => {
+              resultsDiv.innerHTML = `Error: ${err.message}`;
+            })
+            .finally(() => {
+              button.disabled = false;
+            });
         } catch (err) {
           resultsDiv.innerHTML = `Error: ${err.message}`;
-        } finally {
           button.disabled = false;
         }
       }
 
-      // Function to load saved results (if any)
+      // Load saved results function
       function loadSavedResults() {
         const savedResults = localStorage.getItem("lastResults");
         const savedFilter = localStorage.getItem("lastFilter");
@@ -318,10 +360,8 @@
             const results = JSON.parse(savedResults);
             selectedFilter = savedFilter;
             document.querySelectorAll(".filter-btn").forEach((btn) => {
-              btn.classList.toggle(
-                "bg-transparent",
-                btn.dataset.filter !== selectedFilter
-              );
+              btn.classList.toggle("bg-orange-500", btn.dataset.filter === selectedFilter);
+              btn.classList.toggle("bg-transparent", btn.dataset.filter !== selectedFilter);
             });
             renderResults(results, savedFilter, resultsDiv);
           } catch (err) {
@@ -338,33 +378,44 @@
         loadSavedResults();
 
         // Set up event listeners for search button and Enter key
-        document
-          .getElementById("searchButton")
-          .addEventListener("click", searchBrave);
-
-        document
-          .getElementById("searchInput")
-          .addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-              searchBrave();
-            }
-          });
+        document.getElementById("searchButton").addEventListener("click", searchBrave);
+        document.getElementById("searchInput").addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            searchBrave();
+          }
+        });
 
         // Set up filter buttons
         document.querySelectorAll(".filter-btn").forEach((btn) => {
           btn.addEventListener("click", () => setFilter(btn.dataset.filter));
         });
+
+        // Check if there's a search query in the URL
+        const queryParam = getURLParameter("q");
+        const typeParam = getURLParameter("type");
+        
+        if (queryParam) {
+          document.getElementById("searchInput").value = queryParam;
+          if (typeParam) {
+            selectedFilter = typeParam;
+            document.querySelectorAll(".filter-btn").forEach((btn) => {
+              btn.classList.toggle("bg-orange-500", btn.dataset.filter === selectedFilter);
+              btn.classList.toggle("bg-transparent", btn.dataset.filter !== selectedFilter);
+            });
+          }
+          searchBrave();
+        }
       });
     </script>
   </head>
-  <body class="min-h-screen px-[150px]">
+  <body class="min-h-screen px-4 md:px-[150px]">
     <section class="max-w-screen-2xl w-full mx-auto rounded-2xl shadow-sm p-4">
       <div
-        class="flex flex-col sm:flex-row items-center justify-between gap-4 top-0 z-50 fixed w-full"
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 top-0 z-50 fixed w-full left-0 px-4 py-2 md:px-12 bg-[#1d1d1d]/95"
       >
         <img src="./assets/logo/fotise.png" alt="fotise logo" class="w-24" />
         <div
-          class="flex w-full search-container rounded-lg bg-[#2F3035]/85 p-1"
+          class="flex w-full max-w-3xl search-container rounded-lg bg-[#2F3035]/85 p-1"
         >
           <input
             type="text"
@@ -374,40 +425,38 @@
           />
           <button
             id="searchButton"
-            onclick="searchBrave()"
             class="search-button bg-orange-500 px-6 rounded-lg font-medium hover:bg-orange-600"
           >
             Search
           </button>
         </div>
       </div>
-      <hr class="my-2 text-slate-500" />
-      <div class="flex gap-8 mb-4 sm:px-[120px]">
+      
+      <!-- Add padding at the top to accommodate the fixed header -->
+      <div class="pt-28"></div>
+      
+      <div class="flex gap-8 mb-4 overflow-x-auto sm:px-[120px] justify-center">
         <button
-          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          class="filter-btn bg-orange-500 py-2 px-4 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="web"
-          onclick="setFilter('web')"
         >
           Web
         </button>
         <button
-          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          class="filter-btn bg-transparent py-2 px-4 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="images"
-          onclick="setFilter('images')"
         >
           Images
         </button>
         <button
-          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          class="filter-btn bg-transparent py-2 px-4 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="videos"
-          onclick="setFilter('videos')"
         >
           Videos
         </button>
         <button
-          class="filter-btn bg-transparent py-2 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
+          class="filter-btn bg-transparent py-2 px-4 rounded underline-animate transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-[2px]"
           data-filter="news"
-          onclick="setFilter('news')"
         >
           News
         </button>
