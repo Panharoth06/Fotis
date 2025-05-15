@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
 @theme {
   --color-primary-base: #1d1d1d;
   --color-primary-800: #292929;
@@ -38,13 +41,3 @@
   --text-heading-6: 16px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Noto Sans", sans-serif;
-    font-style: normal;
-}

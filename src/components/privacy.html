@@ -1,37 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-primary-base text-white scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy</title>
     <link rel="stylesheet" href="../css/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav><div class="w-full h-28 bg-secondary-base">sefaewsadawdfre</div></nav>
+      <nav>
+        <div
+          class="w-full h-20 bg-secondary-base flex items-center justify-between px-4"
+        ></div>
+      </nav>
     </header>
-    <main>
-      <div class="container">
-        <div class="flex gap-[2%] flex-wrap content-start">
-          <div class="w-1/4 h-3/4 "><div class="privcy-list">
-            <ul>
-                <li>Introduction</li>
-                <li>Information Google collects</li>
-                <li>Why Google collects data</li>
-                <li>Your privacy controls</li>
-                <li>Sharing your information</li>
-                <li>Keeping your information secure</li>
-                <li>Exporting & deleting your information</li>
-                <li>Retaining your information</li>
-                <li>Compliance & cooperation with regulators</li>
-                <li>About this policy</li>
-                <li>Related privacy practices</li>
-            </ul>
-          </div></div>
-          <div class="grow h-3/4">Content</div>
+    <main class="flex flex-col sm:flex-row min-h-screen">
+      <button
+        data-drawer-target="separator-sidebar"
+        data-drawer-toggle="separator-sidebar"
+        aria-controls="separator-sidebar"
+        type="button"
+        class="inline-flex items-center p-2 m-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      >
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+          ></path>
+        </svg>
+      </button>
+      <aside
+        id="separator-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 sm:static bg-primary-base border-r border-white"
+        aria-label="Sidebar"
+      >
+        <div class="h-full px-3 py-4 overflow-y-auto">
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a
+                href="#introduction"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="ms-3">Introduction</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#Information Google collects"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Information Google collects</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Why Google collects data</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Your privacy controls</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Sharing your information</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3">Keeping your information secure</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3"
+                  >Exporting & deleting your information</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3">Retaining your information</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3"
+                  >Compliance & cooperation with regulators</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3">About this policy</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="flex-1 ms-3">Related privacy practices</span>
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="ms-3">Data transfer frameworks</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="ms-3">Key terms</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="ms-3">Partners</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 rounded-lg text-white hover:text-secondary-base group"
+              >
+                <span class="ms-3">Updates</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="flex-1 p-4 sm:ml-64">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-32">
+          <section class="border-b border-primary-50 pb-10">
+            <div class="flex flex-col justify-center gap-8">
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="max-h-64 w-auto"
+                  src="../../brave-proxy/assets/logo/fotis.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="text-2xl font-bold">GOOGLE PRIVACY POLICY</h4>
+              <p class="text-base sm:text-lg">
+                When you use our services, you’re trusting us with your
+                information. We understand this is a big responsibility and work
+                hard to protect your information and put you in control.
+              </p>
+              <p class="text-base sm:text-lg">
+                This Privacy Policy is meant to help you understand what
+                information we collect, why we collect it, and how you can
+                update, manage, export, and delete your information.
+              </p>
+              <div
+                class="privacy-checkup flex items-center gap-3 border-b border-primary-50 pb-10"
+              >
+                <img
+                  class="w-16 h-16"
+                  src="../../brave-proxy/assets/logo/fotis icon.png"
+                  alt=""
+                />
+                <div class="privacy-text flex flex-col gap-3">
+                  <p>Privacy Checkup</p>
+                  <p>Looking to change your privacy settings?</p>
+                  <p class="text-secondary-base">Take the Privacy Checkup</p>
+                </div>
+              </div>
+              <p>
+                Effective September 16, 2024 |<a
+                  href="#"
+                  class="text-secondary-base"
+                >
+                  Archived versions</a
+                >
+                | <a href="#" class="text-secondary-base"> Download PDF</a>
+              </p>
+            </div>
+          </section>
+          <section id="introduction" class="border-b border-primary-50 py-10">
+            <div class="flex flex-col justify-center gap-8">
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="max-h-64 w-auto"
+                  src="../../brave-proxy/assets/logo/watch.png"
+                  alt=""
+                />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-semibold">
+                We build a range of services that help millions of people daily
+                to explore and interact with the world in new ways. Our services
+                include:
+              </h3>
+              <ul class="list-disc list-inside">
+                <li>
+                  Google apps, sites, and devices, like Search, YouTube, and
+                  Google Home
+                </li>
+                <li>
+                  Platforms like the Chrome browser and Android operating system
+                </li>
+                <li>
+                  Products that are integrated into third-party apps and sites,
+                  like ads, analytics, and embedded Google Maps
+                </li>
+              </ul>
+              <p>
+                You can use our services in a variety of ways to manage your
+                privacy. For example, you can sign up for a Google Account if
+                you want to create and manage content like emails and photos, or
+                see more relevant search results. And you can use many Google
+                services when you’re signed out or without creating an account
+                at all, like searching on Google or watching YouTube videos. You
+                can also choose to browse the web in a private mode, like Chrome
+                Incognito mode, which helps keep your browsing private from
+                other people who use your device. And across our services, you
+                can adjust your privacy settings to control whether we collect
+                some types of data and how we use it.
+              </p>
+
+              <p>
+                To help explain things as clearly as possible, we’ve added
+                examples, explanatory videos, and definitions for<a
+                  href="#"
+                  class="text-secondary-base"
+                >
+                  key terms</a
+                >
+                . And if you have any questions about this Privacy Policy, you
+                can
+                <a href="#" class="text-secondary-base"> contact us</a>
+              </p>
+            </div>
+          </section>
+          <section
+            id="Information Google collects"
+            class="border-b border-primary-50 py-10"
+          >
+            <div class="flex flex-col justify-center gap-8">
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="max-h-64 w-auto"
+                  src="../../brave-proxy/assets/logo/watch.png"
+                  alt=""
+                />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-semibold">
+                Information Google collects
+              </h3>
+              <p class="text-heading-3">
+                We want you to understand the types of information we collect as
+                you use our services
+              </p>
+              <p>
+                We collect information to provide better services to all our
+                users — from figuring out basic stuff like which language you
+                speak, to more complex things like which ads you’ll find most
+                useful, the people who matter most to you online, or which
+                YouTube videos you might like. The information Google collects,
+                and how that information is used, depends on how you use our
+                services and how you manage your privacy controls.
+              </p>
+              <p>
+                When you’re not signed in to a Google Account, we store the
+                information we collect with unique identifiers tied to the
+                browser, application, or device you’re using. This allows us to
+                do things like maintain your preferences across browsing
+                sessions, such as your preferred language or whether to show you
+                more relevant search results or ads based on your activity.
+              </p>
+              <p>
+                When you’re signed in, we also collect information that we store
+                with your Google Account, which we treat as personal
+                information.
+              </p>
+              <p class="text-heading-3">Things you create or provide to us</p>
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="w-md"
+                  src="../../brave-proxy/assets/logo/fotis.png"
+                  alt=""
+                />
+              </div>
+              <p>
+                When you create a Google Account, you provide us with personal
+                information that includes your name and a password. You can also
+                choose to add a phone number or payment information to your
+                account. Even if you aren’t signed in to a Google Account, you
+                might choose to provide us with information — like an email
+                address to communicate with Google or receive updates about our
+                services.
+              </p>
+              <p>
+                We also collect the content you create, upload, or receive from
+                others when using our services. This includes things like email
+                you write and receive, photos and videos you save, docs and
+                spreadsheets you create, and comments you make on YouTube
+                videos.
+              </p>
+              <p class="text-heading-3">
+                Information we collect as you use our services
+              </p>
+              <p class="text-heading-5">Your apps, browsers & devices</p>
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="w-md"
+                  src="../../brave-proxy/assets/logo/fotis.png"
+                  alt=""
+                />
+              </div>
+              <p>
+                We collect information about the apps, browsers, and devices you
+                use to access Google services, which helps us provide features
+                like automatic product updates and dimming your screen if your
+                battery runs low.
+              </p>
+              <p>
+                The information we collect includes unique identifiers, browser
+                type and settings, device type and settings, operating system,
+                mobile network information including carrier name and phone
+                number, and application version number. We also collect
+                information about the interaction of your apps, browsers, and
+                devices with our services, including IP address, crash reports,
+                system activity, and the date, time, and referrer URL of your
+                request.
+              </p>
+              <p>
+                We collect this information when a Google service on your device
+                contacts our servers — for example, when you install an app from
+                the Play Store or when a service checks for automatic updates.
+                If you’re using an Android device with Google apps, your device
+                periodically contacts Google servers to provide information
+                about your device and connection to our services. This
+                information includes things like your
+                <span class="text-secondary-base">
+                  device type and carrier name </span
+                >, crash reports, which apps you've installed, and, depending on
+                your device settings,
+                <span class="text-secondary-base">
+                  other information about how you’re using your Android device </span
+                >.
+              </p>
+              <p class="text-heading-5">Your activity</p>
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="w-md"
+                  src="../../brave-proxy/assets/logo/fotis.png"
+                  alt=""
+                />
+              </div>
+              <p>
+                We collect information about your activity in our services,
+                which we use to do things like recommend a YouTube video you
+                might like. The activity information we collect may include:
+              </p>
+              <u class="list-">
+                <li>Terms you search for</li>
+                <li>Videos you watch</li>
+                <li>Views and interactions with content and ads</li>
+                <li>Voice and audio information</li>
+                <li>Purchase activity</li>
+                <li>People with whom you communicate or share content</li>
+                <li>
+                  Activity on third-party sites and apps that use our services
+                </li>
+                <li>
+                  Chrome browsing history you’ve synced with your Google Account
+                </li></u
+              >
+              <p>
+                If you use our services to make and receive calls or send and
+                receive messages, we may collect call and message log
+                information like your phone number, calling-party number,
+                receiving-party number, forwarding numbers, sender and recipient
+                email address, time and date of calls and messages, duration of
+                calls, routing information, and types and volumes of calls and
+                messages. You can visit your Google Account to find and manage
+                activity information that’s saved in your account.
+              </p>
+              <div
+                class="privacy-checkup flex items-center gap-3 border-y border-primary-50 py-"
+              >
+                <img
+                  class="w-16 h-16"
+                  src="../../brave-proxy/assets/logo/fotis icon.png"
+                  alt=""
+                />
+                <div class="privacy-text flex flex-col gap-3">
+                  <p>Privacy Checkup</p>
+                </div>
+              </div>
+              <p class="text-heading-5">Your location information</p>
+              <div class="flex items-center justify-center h-80">
+                <img
+                  class="w-md"
+                  src="../../brave-proxy/assets/logo/fotis.png"
+                  alt=""
+                />
+              </div>
+              <p>
+                We collect location information when you use our services, which
+                helps us offer features like driving directions, search results
+                for things near you, and ads based on your location.
+              </p>
+              <p>
+                Depending on the products you’re using and settings you choose,
+                Google may use different types of location information to help
+                make some services and products you use more helpful. These
+                include:
+              </p>
+              <ul>
+                <li>GPS and other sensor data from your device</li>
+                <li>IP address</li>
+                <li>
+                  Activity on Google services, such as from your searches or
+                  places you label like home or work
+                </li>
+                <li>
+                  Information about things near your device, such as Wi-Fi
+                  access points, cell towers, and Bluetooth-enabled devices
+                </li>
+              </ul>
+              <p class="border-b border-primary-50 pb-10">
+                The types of location data we collect and how long we store it
+                depend in part on your device and account settings. For example,
+                you can
+                <span class="text-secondary-base"
+                  >turn your Android device’s location on or off</span
+                >
+                using the device’s settings app. You can also turn on
+                <span class="text-secondary-base"> Location History </span> if
+                you want to create a private map of where you go with your
+                signed-in devices. And if your Web & App Activity setting is
+                enabled, your searches and other activity from Google services,
+                which may also include location information, is saved to your
+                Google Account. Learn more about
+                <span class="text-secondary-base">
+                  how we use location information </span
+                >.
+              </p>
+              <p>
+                In some circumstances, Google also collects information about
+                you from publicly accessible sources. For example, if your name
+                appears in your local newspaper, Google’s Search engine may
+                index that article and display it to other people if they search
+                for your name. We may also collect information about you from
+                trusted partners, such as directory services who provide us with
+                business information to be displayed on Google’s services,
+                marketing partners who provide us with information about
+                potential customers of our business services, and security
+                partners who provide us with information to protect against
+                abuse. We also receive information from partners to provide
+                advertising and research services on their behalf.
+              </p>
+              <p>
+                We use various technologies to collect and store information,
+                including cookies, pixel tags, local storage, such as browser
+                web storage or application data caches, databases, and server
+                logs.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </main>
-    <footer>footer</footer>
+
+    <footer>
+      <div
+        class="w-full h-20 bg-secondary-base flex items-center justify-between px-4"
+      ></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
