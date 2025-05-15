@@ -6,6 +6,7 @@
     <title>My Search Engine - About Us</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/output.css" />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -20,13 +21,11 @@
     ></script>
     <style>
       body {
-        body {
-          font-family: "Noto Sans", sans-serif !important;
-          font-style: normal;
-          background-color: #1d1d1d;
-          color: #ffffff;
-          overflow-x: hidden;
-        }
+        font-family: "Noto Sans", sans-serif !important;
+        font-style: normal;
+        background-color: #1d1d1d;
+        color: #ffffff;
+        overflow-x: hidden;
       }
       .gradient-text {
         background: linear-gradient(90deg, #ff6b00, #ff9f43);
@@ -69,6 +68,30 @@
     </style>
   </head>
   <body class="min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <header>
+      <nav
+        class="fixed top-0 z-50 bg-primary-base w-full py-6 px-4 flex justify-center space-x-12 text-sm md:text-base font-medium border-b border-gray-800"
+      >
+        <div
+          class="container mx-auto flex justify-center items-center space-x-12"
+        >
+          <a href="/index.html" class="hover:text-orange-500 transition-colors"
+            >Home</a
+          >
+          <a href="#" class="text-orange-500 transition-colors">About</a>
+          <a
+            href="Contactus.html"
+            class="hover:text-orange-500 transition-colors"
+            >Contact</a
+          >
+          <a href="privacy.html" class="hover:text-orange-500 transition-colors"
+            >Privacy</a
+          >
+        </div>
+      </nav>
+    </header>
+
     <!-- Hero Section -->
     <section
       class="hero-bg min-h-screen flex items-center justify-center relative"

@@ -90,15 +90,13 @@
           btn.classList.toggle("bg-transparent", btn.dataset.filter !== filter);
         });
 
-        
         const query = document.getElementById("searchInput").value;
         if (query && query.trim().length >= 2) {
           updateURLWithSearch(query, filter);
-          searchBrave(); 
+          searchBrave();
         }
       }
 
-      
       function getUrlDisplay(item) {
         if (!item.meta_url) return "";
         return `
@@ -109,7 +107,6 @@
         `;
       }
 
-    
       function renderWebResult(item) {
         return `
           <div class="result-card my-[20px] sm:my-[55px]">
@@ -231,13 +228,15 @@
       }
 
       function renderNewsResult(item) {
-  return `
+        return `
     <div class="result-card my-[20px] sm:my-[55px] ">
         <div class="w-full flex gap-4">
           <div class="flex flex-col gap-4">
             <div class="flex items-center gap-2">
               <div className="rounded-full">
-                <img class="rounded-full" style="width: 24px; height: 24px" src="${escapeHTML(item.meta_url.favicon || "")}">  
+                <img class="rounded-full" style="width: 24px; height: 24px" src="${escapeHTML(
+                  item.meta_url.favicon || ""
+                )}">  
               </div>
               <span style="font-size: 14px; color: #ffffff; opacity: 0.5">
                 ${item.meta_url?.netloc || "Unknown source"}  
@@ -257,8 +256,14 @@
           </p>
           </div>   
           <div class="items-center">
-            <a href="${escapeHTML(item.url)}" target="_blank" aria-label="Visit ${escapeHTML(item.title || "Image")}">
-              <img src="${escapeHTML(item.thumbnail?.src || "https://via.placeholder.com/96x96")}"
+            <a href="${escapeHTML(
+              item.url
+            )}" target="_blank" aria-label="Visit ${escapeHTML(
+          item.title || "Image"
+        )}">
+              <img src="${escapeHTML(
+                item.thumbnail?.src || "https://via.placeholder.com/96x96"
+              )}"
                 alt="${escapeHTML(item.title || "Image")}"
                 class="rounded-lg"
                 style="width: 300px; height: auto"
@@ -268,8 +273,8 @@
         </div>
     </div>
   `;
-}
-    
+      }
+
       function renderResults(results, filter, resultsDiv) {
         resultsDiv.innerHTML = "";
 
@@ -281,7 +286,7 @@
         // image results with grid layout
         if (filter === "images") {
           const gridContainer = document.createElement("div");
-          gridContainer.className = "image-grid rounded-lg"; 
+          gridContainer.className = "image-grid rounded-lg";
 
           results.forEach((item) => {
             const imageUrl =
@@ -370,7 +375,7 @@
               return response.json();
             })
             .then((data) => {
-              // console.log("Search results:", data); 
+              // console.log("Search results:", data);
 
               let results;
               if (selectedFilter === "web") {
@@ -480,7 +485,14 @@
       <div
         class="flex flex-col sm:flex-row items-center justify-between gap-4 top-0 z-50 fixed w-full left-0 px-4 py-2 md:px-12 bg-[#1d1d1d]/95"
       >
-        <img src="./assets/logo/fotise.png" alt="fotise logo" class="w-24" />
+        <a href="/index.html">
+          <img
+            src="./assets/logo/fotis-logo.png"
+            alt="fotise logo"
+            class="w-24"
+          />
+        </a>
+
         <div
           class="flex w-full max-w-3xl search-container rounded-lg bg-[#2F3035]/85 p-1"
         >

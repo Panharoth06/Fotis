@@ -5,19 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fotis - Home</title>
     <link rel="stylesheet" href="./src/css/output.css" />
+<style>
+  body {
+    font-family: "Noto Sans", sans-serif !important;
+    font-style: normal;
+    background-color: #1d1d1d;
+    color: #ffffff;
+
+    background-image: url("./src/images/wave.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+ /* or 'contain' depending on your preference */
+  }
+</style>
+
   </head>
-  <body
-    class="bg-black text-white min-h-screen flex flex-col relative overflow-hidden"
-  >
+  <body class="min-h-screen flex flex-col relative overflow-hidden">
     <!-- Navigation Bar -->
-    <nav
-      class="w-full py-6 px-4 flex justify-center space-x-12 text-sm md:text-base font-medium border-b border-gray-800"
-    >
-      <a href="#" class="hover:text-orange-500 transition-colors">Home</a>
-      <a href="#" class="hover:text-orange-500 transition-colors">About</a>
-      <a href="#" class="hover:text-orange-500 transition-colors">Contact</a>
-      <a href="#" class="hover:text-orange-500 transition-colors">Privacy</a>
-    </nav>
+<header>
+      <nav
+        class="fixed top-0 z-50 bg-primary-base w-full py-6 px-4 flex justify-center space-x-12 text-sm md:text-base font-medium border-b border-gray-800"
+      >
+        <a href="#" class="text-orange-500 transition-colors"
+          >Home</a
+        >
+        <a href="./src/components/AboutUs.html" class="hover:text-orange-500 transition-colors"
+          >About</a
+        >
+        <a href="./src/components/Contactus.html" class="hover:text-orange-500 transition-colors">Contact</a>
+        <a href="./src/components/privacy.html" class="hover:text-orange-500 transition-colors"
+          >Privacy</a
+        >
+      </nav>
+    </header>
     <!-- Main Content -->
     <div
       class="flex-grow flex flex-col items-center justify-center px-4 z-10 relative"
@@ -25,7 +46,7 @@
       <!-- Logo -->
       <div>
         <img
-          src="./src/images/logofotis.png"
+          src="./src/images/fotis-logo.png"
           alt="Fotis Logo"
           class="w-[170px] h-[170px] md:w-[170px] md:h-[170px] sm:w-[120px] sm:h-[120px] xs:w-[80px] xs:h-[80px] bulb-glow"
         />
@@ -54,30 +75,37 @@
               ></path>
             </svg>
           </span>
-          <input
-            type="text"
-            placeholder="Search with Fotis"
-            class="w-full pl-12 pr-10 py-3 text-lg md:text-xl rounded-full bg-transparent text-white focus:outline-none placeholder-gray-400"
-            style="font-size: 1.25rem"
-          />
-          <button
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-          >
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
+          <form action="./brave-proxy/result.html" method="GET">
+            <div class="relative">
+              <input
+                type="text"
+                name="q"
+                id="searchInput"
+                placeholder="Search with Fotis"
+                class="w-full pl-12 pr-10 py-3 text-lg md:text-xl rounded-full bg-transparent text-white focus:outline-none placeholder-gray-400"
+                style="font-size: 1.25rem"
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
