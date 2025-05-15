@@ -4,49 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Contact Form</title>
-    <link href="../css/output.css" rel="stylesheet">
+    <link href="../css/output.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif !important;
+        font-style: normal;
+        background-color: #1d1d1d;
+        color: #ffffff;
+      }
+    </style>
   </head>
   <body class="bg-[#1d1d1d] font-serif">
-  
     <!-- Hero Image Background - Adjusted for small screens -->
-    <div class="w-full h-40 sm:h-96 md:h-96 lg:h-[375px] bg-cover bg-center relative">
+    <div
+      class="w-full h-40 sm:h-96 md:h-96 lg:h-[375px] bg-cover bg-center relative"
+    >
       <!-- Placeholder image since external URLs aren't allowed -->
       <div class="w-full h-[90%] opacity-80"></div>
-      
+
       <!-- Orange Highlight Section - Adjusted for small screens -->
-      <div class="absolute inset-0 bg-opacity-8  md:mt-36 lg:mt-40 h-16 sm:h-36 md:h-36 lg:h-40"></div>
+      <div
+        class="absolute inset-0 bg-opacity-8 md:mt-36 lg:mt-40 h-16 sm:h-36 md:h-36 lg:h-40"
+      ></div>
       <div class="mt-[80px] sm:mt-[100px]"></div>
-      
+
       <!-- FOTIS Text Overlay - Adjusted for small screens -->
-      <div class="absolute top-8 sm:top-8 md:top-12 lg:top-16 left-1/2 transform -translate-x-1/2 text-center bg-black w-full md:h-[75%]">
+      <div
+        class="absolute top-8 sm:top-8 md:top-12 lg:top-16 left-1/2 transform -translate-x-1/2 text-center bg-black w-full md:h-[75%]"
+      >
         <div class="text-[#FF9500] opacity-50 font-serifc font-bold uppercase">
-          <span class="text-9xl sm:text-9xl md:text-9xl lg:text-[20rem] leading-none">F</span>
-          <span class="text-8xl sm:text-8xl md:text-8xl lg:text-[15rem] leading-none">otis</span>
+          <span
+            class="text-9xl sm:text-9xl md:text-9xl lg:text-[20rem] leading-none"
+            >F</span
+          >
+          <span
+            class="text-8xl sm:text-8xl md:text-8xl lg:text-[15rem] leading-none"
+            >otis</span
+          >
         </div>
       </div>
-      
+
       <!-- Search Bar - Adjusted for small screens -->
-      <div class="sm:block hidden absolute md:bottom-28  left-1/2 transform -translate-x-1/2 w-[90%]  lg:w-[700px]">
-        <div class="bg-[#1d1d1d] bg-opacity-95 border border-[#f5f5f5] rounded-2xl p-2">
-          <span class="block text-center text-[#f5f5f5] uppercase text-xs sm:text-sm md:text-lg font-serif">How Can We Help You?</span>
+      <div
+        class="sm:block hidden absolute md:bottom-28 left-1/2 transform -translate-x-1/2 w-[90%] lg:w-[700px]"
+      >
+        <div
+          class="bg-[#1d1d1d] bg-opacity-95 border border-[#f5f5f5] rounded-2xl p-2"
+        >
+          <span
+            class="block text-center text-[#f5f5f5] uppercase text-xs sm:text-sm md:text-lg font-serif"
+            >How Can We Help You?</span
+          >
         </div>
       </div>
     </div>
 
     <!-- Contact Form Section - Adjusted for small screens -->
-    <div class="px-4 sm:px-6 md:px-36 lg:px-25 py-6 sm:py-8 mb-10 sm:mb-20 md:py-12">
+    <div
+      class="px-4 sm:px-6 md:px-36 lg:px-25 py-6 sm:py-8 mb-10 sm:mb-20 md:py-12"
+    >
       <!-- Heading -->
-      <h2 class="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center uppercase mb-6 sm:mb-8 mt-8 sm:mt-10 md:mb-12 font-bold font-serif">
+      <h2
+        class="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center uppercase mb-6 sm:mb-8 mt-8 sm:mt-10 md:mb-12 font-bold font-serif"
+      >
         We'd love to hear from you!
       </h2>
-      
+
       <!-- Form Container -->
       <div class="flex flex-col md:flex-row md:gap-12 font-serif">
         <!-- Left Side Form -->
         <div class="w-full md:w-1/2 space-y-4 sm:space-y-6">
           <!-- First Name -->
           <div class="relative">
-            <span class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left">First Name</span>
+            <span
+              class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left"
+              >First Name</span
+            >
             <input
               type="text"
               class="w-full h-12 sm:h-14 bg-[#1d1d1d] bg-opacity-70 border border-white hover:border-orange-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white"
@@ -55,7 +88,10 @@
 
           <!-- Last Name -->
           <div class="relative">
-            <span class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left">Last Name</span>
+            <span
+              class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left"
+              >Last Name</span
+            >
             <input
               type="text"
               class="w-full h-12 sm:h-14 bg-[#1d1d1d] bg-opacity-70 border border-white hover:border-orange-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white"
@@ -64,7 +100,10 @@
 
           <!-- Email -->
           <div class="relative">
-            <span class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left">E-mail</span>
+            <span
+              class="block text-white uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left"
+              >E-mail</span
+            >
             <input
               type="email"
               class="w-full h-12 sm:h-14 bg-[#1d1d1d] bg-opacity-70 border border-white hover:border-orange-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white"
@@ -75,7 +114,10 @@
         <!-- Right Side Form -->
         <div class="w-full md:w-1/2 mt-4 sm:mt-6 md:mt-0">
           <div class="relative h-full">
-            <span class="block text-[#f5f5f5] uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left">Leave a message for us</span>
+            <span
+              class="block text-[#f5f5f5] uppercase text-sm sm:text-base mb-1 sm:mb-2 text-left"
+              >Leave a message for us</span
+            >
             <textarea
               class="w-full h-40 sm:h-64 md:h-64 bg-[#1d1d1d] bg-opacity-70 border border-white hover:border-orange-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white resize-none"
             ></textarea>

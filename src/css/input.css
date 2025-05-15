@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @theme {
   --color-primary-base: #1d1d1d;
   --color-primary-800: #292929;
@@ -45,7 +47,7 @@
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif !important;
   font-style: normal;
   background-color: #1d1d1d;
   color: #ffffff;
