@@ -1,6 +1,7 @@
-@import "tailwindcss";
-
+@import "tailwindcss"; 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 
 @theme {
   --color-primary-base: #1d1d1d;
@@ -40,15 +41,3 @@
   --text-heading-6: 16px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Noto Sans", sans-serif !important;
-  font-style: normal;
-  background-color: #1d1d1d;
-  color: #ffffff;
-}
