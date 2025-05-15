@@ -3,170 +3,457 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/output.css" />
+    <title>My Search Engine - About Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- AOS (Animate on Scroll) CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Alpine.js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #1d1d1d;
+        overflow-x: hidden;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #ff6b00, #ff9f43);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-bg {
+        background: url("https://images.unsplash.com/photo-1516321310764-8d9c8968d305?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+          no-repeat center center;
+        background-size: cover;
+        position: relative;
+      }
+      .hero-overlay {
+        background: rgba(0, 0, 0, 0.7);
+      }
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      }
+      .team-card {
+        perspective: 1000px;
+      }
+      .team-card-inner {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .team-card:hover .team-card-inner {
+        transform: rotateY(180deg);
+      }
+      .team-card-front,
+      .team-card-back {
+        backface-visibility: hidden;
+      }
+      .team-card-back {
+        transform: rotateY(180deg);
+      }
+    </style>
   </head>
-  <body class="bg-black text-white">
-    <!-- Header Section -->
-    <header class="bg-black p-6">
-      <div class="flex justify-between items-center">
-        <!-- Font Awesome Logo Emoji -->
-        <div class="text-4xl text-orange-500">
-          <img src="brave-proxy/assets/logo/fotise.png" alt=""><!-- Replace 'fa-search' with any icon of your choice -->
-        </div>
-        <nav>
-          <a href="#home" class="text-white px-4">Home</a>
-          <a href="#about" class="text-white px-4">About</a>
-          <a href="#contact" class="text-white px-4">Contact</a>
-        </nav>
+  <body class="min-h-screen text-white">
+    <!-- Hero Section -->
+    <section
+      class="hero-bg min-h-screen flex items-center justify-center relative"
+    >
+      <div class="hero-overlay absolute inset-0"></div>
+      <div
+        class="relative z-10 text-center max-w-4xl mx-auto px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1 class="text-5xl sm:text-7xl font-extrabold gradient-text mb-6">
+          About My Search Engine
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
+          A cutting-edge, student-built search tool crafted in 2025 by Team
+          Searchers to deliver lightning-fast, accurate results for learners
+          worldwide.
+        </p>
+        <a
+          href="#mission"
+          class="inline-block bg-gradient-to-r from-orange-500 to-orange-300 text-white font-semibold py-3 px-8 rounded-full hover:from-orange-600 hover:to-orange-400 transition-all"
+          >Discover Our Mission</a
+        >
       </div>
-    </header>
+    </section>
 
-    <!-- Main Section: About Us -->
-    <main class="max-w-3xl mx-auto py-16 px-4">
-      <!-- About Us Section -->
-      <section id="about" class="text-center">
-        <h1 class="text-4xl font-bold text-orange-500 mb-4">About Us</h1>
-        <p class="text-lg mb-4">
-          My Search Engine is a student-built tool designed to deliver fast,
-          accurate results for learning purposes. Created in 2025 by Team
-          Searchers, it showcases modern web development techniques.
-        </p>
-        <p class="text-lg mb-4">
-          Our mission is to provide a simple, user-friendly search experience
-          while demonstrating advanced UI/UX and responsive design. We believe
-          learning should be easy and accessible for everyone.
-        </p>
-        <p class="text-lg mb-8">
-          Developed by Team Searchers as part of a frontend mini-project, this
-          tool aims to make the internet a better learning resource.
-        </p>
-      </section>
-
-      <!-- Our Mission Section -->
-      <section id="mission" class="mb-16">
-        <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">
-          Our Mission
+    <!-- About Section -->
+    <section id="about" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+      <div
+        class="text-center mb-16"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">
+          Our Story
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Mission Cards -->
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <div class="text-orange-500 mb-4">
-              <i class="fas fa-search fa-3x"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-orange-500">Fast Search</h3>
-            <p class="text-gray-400">
-              Delivering quick and relevant search results to users.
-            </p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <div class="text-orange-500 mb-4">
-              <i class="fas fa-mobile-alt fa-3x"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-orange-500">Modern Design</h3>
-            <p class="text-gray-400">
-              Featuring a clean, contemporary user interface.
-            </p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <div class="text-orange-500 mb-4">
-              <i class="fas fa-user fa-3x"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-orange-500">User-Friendly</h3>
-            <p class="text-gray-400">
-              Ensuring ease of use and intuitive navigation.
-            </p>
-          </div>
-      </section>
+        <p
+          class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+        >
+          My Search Engine is more than a tool—it's a passion project by Team
+          Searchers, showcasing modern web development and a commitment to
+          accessible learning. Launched in 2025, our platform combines sleek
+          design with powerful functionality to make knowledge discovery
+          effortless.
+        </p>
+      </div>
+    </section>
 
-      <!-- Meet the Team Section -->
-      <section id="team" class="mb-16">
-        <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">
-          Meet Our Team
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Team Member Cards -->
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member1.jpg"
-              alt="CHHENG PANHAROTH"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">CHHENG PANHAROTH</h3>
-            <p class="text-gray-400">Group Leader</p>
+    <!-- Mission Section -->
+    <section
+      id="mission"
+      class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
+    >
+      <h2
+        class="text-4xl sm:text-5xl font-bold text-center gradient-text mb-12"
+        data-aos="fade-up"
+      >
+        Our Mission
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Mission Cards -->
+        <div
+          class="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl card-hover"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <div class="text-orange-400 mb-6">
+            <i class="fas fa-search fa-4x"></i>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member2.jpg"
-              alt="CHENG DEVITH"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">CHENG DEVITH</h3>
-            <p class="text-gray-400">Member</p>
+          <h3 class="text-2xl font-semibold text-orange-400 mb-3">
+            Blazing Fast Search
+          </h3>
+          <p class="text-gray-400">
+            Engineered to deliver instant, relevant results, empowering users to
+            find what they need in seconds.
+          </p>
+        </div>
+        <div
+          class="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl card-hover"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <div class="text-orange-400 mb-6">
+            <i class="fas fa-mobile-alt fa-4x"></i>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member3.jpg"
-              alt="CHAING POLIN"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">CHAING POLIN</h3>
-            <p class="text-gray-400">Member</p>
+          <h3 class="text-2xl font-semibold text-orange-400 mb-3">
+            Sleek Modern Design
+          </h3>
+          <p class="text-gray-400">
+            A visually stunning interface that’s intuitive and responsive across
+            all devices.
+          </p>
+        </div>
+        <div
+          class="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl card-hover"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <div class="text-orange-400 mb-6">
+            <i class="fas fa-user fa-4x"></i>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member4.jpg"
-              alt="CHHOUR ECHHEAN"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">CHHOUR ECHHEAN</h3>
-            <p class="text-gray-400">Member</p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member5.jpg"
-              alt="RIN BUNVARN"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">RIN BUNVARN</h3>
-            <p class="text-gray-400">Member</p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member6.jpg"
-              alt="ROEURM DARA"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">ROEURM DARA</h3>
-            <p class="text-gray-400">Member</p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member7.jpg"
-              alt="NARONG SEU"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">NARONG SEU</h3>
-            <p class="text-gray-400">Member</p>
-          </div>
-          <div class="bg-gray-800 p-6 rounded-lg text-center transition-transform transform hover:scale-105 hover:bg-gray-700">
-            <img
-              src="member8.jpg"
-              alt="LENG SENGHONG"
-              class="rounded-full h-32 w-32 mx-auto mb-4"
-            />
-            <h3 class="text-xl font-semibold text-orange-500">LENG SENGHONG</h3>
-            <p class="text-gray-400">Member</p>
+          <h3 class="text-2xl font-semibold text-orange-400 mb-3">
+            User-Centric Experience
+          </h3>
+          <p class="text-gray-400">
+            Designed with simplicity and accessibility in mind for seamless
+            navigation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+      <h2
+        class="text-4xl sm:text-5xl font-bold text-center gradient-text mb-12"
+        data-aos="fade-up"
+      >
+        Meet Team Searchers
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Team Member Cards -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member1.jpg"
+                alt="CHHENG PANHAROTH"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                CHHENG PANHAROTH
+              </h3>
+              <p class="text-gray-400">Group Leader</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                CHHENG PANHAROTH
+              </h3>
+              <p class="text-white mb-4">Leading with vision and passion.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-black text-center text-white py-6">
-      <p>&copy; 2025 My Search Engine. All Rights Reserved.</p>
-    </footer>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member2.jpg"
+                alt="CHENG DEVITH"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                CHENG DEVITH
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                CHENG DEVITH
+              </h3>
+              <p class="text-white mb-4">Crafting seamless user experiences.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member3.jpg"
+                alt="CHAING POLIN"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                CHAING POLIN
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                CHAING POLIN
+              </h3>
+              <p class="text-white mb-4">Building robust solutions.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member4.jpg"
+                alt="CHHOUR ECHHEAN"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                CHHOUR ECHHEAN
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                CHHOUR ECHHEAN
+              </h3>
+              <p class="text-white mb-4">Designing intuitive interfaces.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member5.jpg"
+                alt="RIN BUNVARN"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                RIN BUNVARN
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">RIN BUNVARN</h3>
+              <p class="text-white mb-4">Optimizing performance.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member6.jpg"
+                alt="ROEURM DARA"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                ROEURM DARA
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">ROEURM DARA</h3>
+              <p class="text-white mb-4">Enhancing user engagement.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member7.jpg"
+                alt="NARONG SEU"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                NARONG SEU
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">NARONG SEU</h3>
+              <p class="text-white mb-4">Driving innovation.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="800">
+          <div class="team-card-inner relative w-full h-96">
+            <div
+              class="team-card-front absolute inset-0 bg-gray-900 rounded-2xl p-6 text-center card-hover"
+            >
+              <img
+                src="member8.jpg"
+                alt="LENG SENGHONG"
+                class="rounded-full h-32 w-32 mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold text-orange-400 mb-1">
+                LENG SENGHONG
+              </h3>
+              <p class="text-gray-400">Member</p>
+            </div>
+            <div
+              class="team-card-back absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-300 rounded-2xl p-6 text-center flex flex-col justify-center"
+            >
+              <h3 class="text-xl font-semibold text-white mb-2">
+                LENG SENGHONG
+              </h3>
+              <p class="text-white mb-4">Creating impactful designs.</p>
+              <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-linkedin fa-lg"></i
+                ></a>
+                <a href="#" class="text-white hover:text-gray-200"
+                  ><i class="fab fa-github fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AOS Initialization Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
