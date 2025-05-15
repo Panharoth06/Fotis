@@ -1,0 +1,370 @@
+{
+    "type": "news",
+    "query": {
+        "original": "Quantum Computer ",
+        "spellcheck_off": false,
+        "show_strict_warning": false
+    },
+    "results": [
+        {
+            "type": "news_result",
+            "title": "D-Wave Reports First Quarter 2025 Results",
+            "url": "https://finance.yahoo.com/news/d-wave-reports-first-quarter-110000209.html",
+            "description": "PALO ALTO, Calif., May 08, 2025--D-Wave Quantum Inc., (NYSE: QBTS) (\"D-Wave\" or the \"Company\") a leader in commercial quantum computing systems, software, and services, today announced financial results for its first quarter ended March 31, 2025.",
+            "age": "1 week ago",
+            "page_age": "2025-05-08T23:00:06",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "finance.yahoo.com",
+                "hostname": "finance.yahoo.com",
+                "favicon": "https://imgs.search.brave.com/ZxJbtHZiiBXciqcRfJn3XPiTEOf_XYrooAjrJf1rnag/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjRkNjc1NWY5/MzM5ZjlkMWQyNjM5/OWNiMTQ4ZjcwNTQx/ZjA3ZDE4NDQ2M2Iw/MWZjZjVhOTFlM2Ji/NTE1NWRjZS9maW5h/bmNlLnlhaG9vLmNv/bS8",
+                "path": "› news  › d-wave-reports-first-quarter-110000209.html"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/22HN5qZJEEtmEZmhNBlN9y5bsPe_iYFWh3mngqpWKnI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS56ZW5mcy5jb20v/ZW4vYnVzaW5lc3Mt/d2lyZS5jb20vYzVk/OWM0MTczYmFiMDY2/ZjRkZmUyZDkwY2Ri/NjI5ZGQ"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Quantum computing stock surges after surprising announcement - TheStreet",
+            "url": "https://www.thestreet.com/technology/quantum-computing-stock-surges-after-surprising-announcement",
+            "description": "A little-known company just shocked the tech world, sending share prices skyrocketing.",
+            "age": "1 week ago",
+            "page_age": "2025-05-08T21:30:07",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "thestreet.com",
+                "hostname": "www.thestreet.com",
+                "favicon": "https://imgs.search.brave.com/-VC9dZps0BgtEX1S6D7NG3hdqWp5SDvxju1_9jZWAD8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDNkOGE0YjUy/YThmNjljOTAxM2Zj/YmFlZTQ5Y2EzMTc2/ZGI1YTAyNTE3MjA0/MjUzOWJjMzE3ZDcz/MTQ1ZmE1MS93d3cu/dGhlc3RyZWV0LmNv/bS8",
+                "path": "› technology  › quantum-computing-stock-surges-after-surprising-announcement"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/ppUXgAO04PpKLAWSBOuLtm37RhwByFmprUG1eUC_2oE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dGhlc3RyZWV0LmNv/bS8uaW1hZ2UvYXJf/MS45MSUyQ2NfZmls/bCUyQ2NzX3NyZ2Il/MkNmbF9wcm9ncmVz/c2l2ZSUyQ2dfZmFj/ZXM6Y2VudGVyJTJD/cV9hdXRvOmdvb2Ql/MkN3XzEyMDAvTWpF/eE56WTNNVE16TlRF/d05UYzFOalV4L3F1/YW50dW1fY29tcHV0/ZXJzX3N0b2Nrc19r/bC5qcGc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Listen to the ‘world’s first’ song made by a quantum computer and AI",
+            "url": "https://thenextweb.com/news/lworlds-first-song-made-by-quantum-and-ai",
+            "description": "The beat just dropped on a new era of music, and it’s coming from the weird and wonderful realm of quantum physics.",
+            "age": "1 week ago",
+            "page_age": "2025-05-08T15:29:28",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "thenextweb.com",
+                "hostname": "thenextweb.com",
+                "favicon": "https://imgs.search.brave.com/uLzhda6houCMSvYApceeyMjz3qvumJ8nWbGAAgpNy4s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQ5NDVlY2I1/N2MzNjJlODJkYjhi/MDA5YWIyNGMzZGQx/ZTkxMzgyN2RiMWEy/MzA1OTE0Mjg0NDY2/OWEzY2ZhOC90aGVu/ZXh0d2ViLmNvbS8",
+                "path": "› news  › lworlds-first-song-made-by-quantum-and-ai"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/byr7KufEO5hy77im86Hvlym5m6sp7qk67L4kePCDtXY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWct/Y2RuLnRud2Nkbi5j/b20vaW1hZ2UvdG53/LWJsdXJwbGU_Zmls/dGVyX2xhc3Q9MSZh/bXA7Zml0PTEyODAl/MkM2NDAmYW1wO3Vy/bD1odHRwcyUzQSUy/RiUyRmNkbjAudG53/Y2RuLmNvbSUyRndw/LWNvbnRlbnQlMkZi/bG9ncy5kaXIlMkYx/JTJGZmlsZXMlMkYy/MDI1JTJGMDUlMkZx/dWFudHVtLW11c2lj/LUFJLW1vdGguanBn/JmFtcDtzaWduYXR1/cmU9MGQ1MDhiMWIy/ZTJlMTQ0NWM2Nzdk/NGYyZjhhYTM4NDc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Alice & Bob to build Paris lab for quantum computing | MarketScreener",
+            "url": "https://www.marketscreener.com/quote/stock/QUANTUM-COMPUTING-INC-120790471/news/Alice-Bob-to-build-Paris-lab-for-quantum-computing-49880348/",
+            "description": "French tech startup Alice & Bob said it was building a $50 million quantum computing laboratory in Paris to support the development of its products. The new lab will enable Alice &...",
+            "age": "1 week ago",
+            "page_age": "2025-05-09T02:12:35",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "marketscreener.com",
+                "hostname": "www.marketscreener.com",
+                "favicon": "https://imgs.search.brave.com/av5rSlD013tOmDwDF-yyMLpfuP9kFsr5g9DnvwNLcVQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDlhOGYzNzE4/ZjBlMWVkODhkNDll/M2MyNmFhZWZmZGZm/MzdiYzUzMzM4YzQz/ZWFjNjc0YzZmZjgw/OGI3YjlmOC93d3cu/bWFya2V0c2NyZWVu/ZXIuY29tLw",
+                "path": "› quote  › stock  › QUANTUM-COMPUTING-INC-120790471  › news  › Alice-Bob-to-build-Paris-lab-for-quantum-computing-49880348"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/qp81goNQ3Ll8knoiiaS5Vw_2Vgjlxnu4t_5hYbfJwr4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWFya2V0c2NyZWVu/ZXIuY29tL2ltYWdl/cy90d2l0dGVyX01T/X2Zkbm9pci5wbmc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Linde Engineering to Deliver Large Cryogenic Plant to PsiQuantum in Australia",
+            "url": "https://thequantuminsider.com/2025/05/09/linde-engineering-to-deliver-large-cryogenic-plant-to-psiquantum-in-australia/",
+            "description": "Linde Engineering will build one of the largest cryogenic cooling plants ever designed for quantum computing to support PsiQuantum.",
+            "age": "6 days ago",
+            "page_age": "2025-05-09T16:15:06",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "thequantuminsider.com",
+                "hostname": "thequantuminsider.com",
+                "favicon": "https://imgs.search.brave.com/yqUBKgLlJM6Fy4Xd7U6ENLKuvasbNAkyfGODrOAMxmA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYThhZmY2NTZj/YTEyMTIwMDgzNWJl/Y2JhNDAwNTY3Njhh/MjJkMWUzNjM3YzUz/ZGZmYzU5NTI0ODYy/YjA1ZDY5NS90aGVx/dWFudHVtaW5zaWRl/ci5jb20v",
+                "path": "› 2025  › 05  › 09  › linde-engineering-to-deliver-large-cryogenic-plant-to-psiquantum-in-australia"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/yl7JF1q7rESnu4w7kcdr5TRCIxBQ4ViOQvBw5eGrZEc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aGVx/dWFudHVtaW5zaWRl/ci5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMDUvY29v/bGluZy0xLnBuZw"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "World's first silicon-based quantum computer is small enough to plug into a regular power socket | Live Science",
+            "url": "https://www.livescience.com/technology/computing/worlds-first-silicon-based-quantum-computer-is-small-enough-to-plug-into-a-regular-power-socket",
+            "description": "An Irish startup has created the world's first silicon-based quantum computer — it can still integrate seamlessly with classical computing in data centers.",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T16:00:09",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "livescience.com",
+                "hostname": "www.livescience.com",
+                "favicon": "https://imgs.search.brave.com/g0CDJqqZI5yaDHga_4X-s4QKVsZnB8MiNFIpIL1ut0o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTY4YjYyNmU0/NzE5NTg4Y2NkMjdl/OWQ1NzcxY2I3ZWMz/Y2E3ZDY0OTcwYzIy/YWIxZmE5OWVhOTc2/ODZlZDMxNC93d3cu/bGl2ZXNjaWVuY2Uu/Y29tLw",
+                "path": "› technology  › computing  › worlds-first-silicon-based-quantum-computer-is-small-enough-to-plug-into-a-regular-power-socket"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/HjKa2z6ai6smJ2LmbjyF6UKgLh_CJPyLuGEwvPK1YLE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L2NS/dzlzenNMa21ZRU5M/OXRMbVNuZlouanBn"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Scaling up superconducting quantum computers | Nature Electronics",
+            "url": "https://www.nature.com/articles/s41928-025-01381-7",
+            "description": "Superconducting qubits could be used to build a fault-tolerant quantum computer. But such a device will require millions of components, and various fundamental challenges remain to be addressed. Success will depend on sustained collaboration between industry and academia.",
+            "age": "1 week ago",
+            "page_age": "2025-05-05T17:19:43",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "nature.com",
+                "hostname": "www.nature.com",
+                "favicon": "https://imgs.search.brave.com/0fL1osa7ifHN59zuJ6uJJLU7Z-L3ioVavMKYltv4AFQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTRhOGIyNjMw/Y2Y5NTYwZWIxNjNl/MDlkYjQ3Y2FiOWVh/MThhOTUyZDIwYWZj/NGRkMDk2MzZjZGRi/MzI1YTkxOC93d3cu/bmF0dXJlLmNvbS8",
+                "path": "› articles  › s41928-025-01381-7"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/Okj0gqdWxOCRJvvxN0nTcG-I8B7eG6Ywg2Tk2_uzifg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5zcHJpbmdlcm5h/dHVyZS5jb20vbTY4/NS9zcHJpbmdlci1z/dGF0aWMvaW1hZ2Uv/YXJ0JTNBMTAuMTAz/OCUyRnM0MTkyOC0w/MjUtMDEzODEtNy9N/ZWRpYU9iamVjdHMv/NDE5MjhfMjAyNV8x/MzgxX0ZpZzFfSFRN/TC5wbmc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Quantum computers don’t always need more qubits – just add chaos | New Scientist",
+            "url": "https://www.newscientist.com/article/2478864-quantum-computers-dont-always-need-more-qubits-just-add-chaos/",
+            "description": "To create useful randomness in a quantum computer, you could add more quantum bits, but using quantum chaos does the trick too",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T15:54:39",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "newscientist.com",
+                "hostname": "www.newscientist.com",
+                "favicon": "https://imgs.search.brave.com/cFSgFpytuhybwOYDSMZu57gZB_KcXJKYLP9A9PFvNuk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFmYWQzNTky/ZmRiNTU1YzM4OTM0/ZjkxOTVhMTY3MWQx/MDhhMzc5NGEyYWRm/YTVhZDJhZWE4ODY0/MWY4NGZjNC93d3cu/bmV3c2NpZW50aXN0/LmNvbS8",
+                "path": "› article  › 2478864-quantum-computers-dont-always-need-more-qubits-just-add-chaos"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/t3cxqiOL4zLG_ij3W5a_KFKsex8mrQmMttXiM1LJ2Nc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubmV3c2NpZW50/aXN0LmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNS8w/MjE0MjYyNS9TRUlf/MjQ5NjY4OTU5Lmpw/Zw"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "IonQ Announces Intention to Acquire Lightsynq",
+            "url": "https://thequantuminsider.com/2025/05/07/ionq-announces-intention-to-acquire-lightsynq/",
+            "description": "PRESS RELEASE — IonQ (NYSE: IONQ), a leading commercial quantum computing and networking company, today announced that it has entered into a definitive agreement to acquire Lightsynq Technologies Inc., a Boston-based startup founded by former Harvard University quantum memory experts.",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T21:50:34",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "thequantuminsider.com",
+                "hostname": "thequantuminsider.com",
+                "favicon": "https://imgs.search.brave.com/yqUBKgLlJM6Fy4Xd7U6ENLKuvasbNAkyfGODrOAMxmA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYThhZmY2NTZj/YTEyMTIwMDgzNWJl/Y2JhNDAwNTY3Njhh/MjJkMWUzNjM3YzUz/ZGZmYzU5NTI0ODYy/YjA1ZDY5NS90aGVx/dWFudHVtaW5zaWRl/ci5jb20v",
+                "path": "› 2025  › 05  › 07  › ionq-announces-intention-to-acquire-lightsynq"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/btLieMNvgKAOLNnsqQwcgGeEqp-7DW_9F7IdEVS7oJ8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aGVx/dWFudHVtaW5zaWRl/ci5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMDUvSU9O/US0yLTEucG5n"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "IonQ to acquire Lightsynq, boosting quantum tech capabilities By Investing.com",
+            "url": "https://www.investing.com/news/company-news/ionq-to-acquire-lightsynq-boosting-quantum-tech-capabilities-93CH-4029753",
+            "description": "According to InvestingPro data, the company maintains a strong financial position with more cash than debt on its balance sheet. This strategic move aims to bolster IonQ’s quantum computing and networking roadmaps, leveraging Lightsynq’s expertise and intellectual property.",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T21:20:04",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "investing.com",
+                "hostname": "www.investing.com",
+                "favicon": "https://imgs.search.brave.com/6VNSA4kUKwab_nuwPgXCKOiia1HG1LupU-JJfiMkPe0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWY4YjM5OWU3/OWVlNzFmYjIwMWIx/MDcyNTdmMjBjY2Uy/MjM1NDI2ZjAwZTZm/YjhiNjUxOTFhYmYz/M2ZkYWZkZC93d3cu/aW52ZXN0aW5nLmNv/bS8",
+                "path": "› news  › company-news  › ionq-to-acquire-lightsynq-boosting-quantum-tech-capabilities-93CH-4029753"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/GmOzpjbdxxOu9xmCyBvgf5T2KdbwrX7NvyRcGaEduNo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLWlu/dmRuLWNvbS5pbnZl/c3RpbmcuY29tL3Jl/ZGVzaWduL2ltYWdl/cy9zZW8vaW52ZXN0/aW5nXzMwMFgzMDAu/cG5n"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "IonQ Announces Intention to Acquire Lightsynq, Expediting Quantum Computing, Quantum Internet, and Offering Clear Path to Millions of Qubits",
+            "url": "https://www.businesswire.com/news/home/20250507428082/en/IonQ-Announces-Intention-to-Acquire-Lightsynq-Expediting-Quantum-Computing-Quantum-Internet-and-Offering-Clear-Path-to-Millions-of-Qubits",
+            "description": "IonQ (NYSE: IONQ), a leading commercial quantum computing and networking company, today announced that it has entered into a definitive agreement to acquire ...",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T20:05:00",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "businesswire.com",
+                "hostname": "www.businesswire.com",
+                "favicon": "https://imgs.search.brave.com/1GERNwe_y4UBMQ4R98h03Ex17XOTQ15BJ7S60NGFwhw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzI5NmZhMjM5/ZGI2YmNhNzVkZWNh/MjI1NGI2ODk0MGVk/YTczZTZhMDJkOThh/YzAxNThhMjhkOGJk/NWFkNjZjZS93d3cu/YnVzaW5lc3N3aXJl/LmNvbS8",
+                "path": "› news  › home  › 20250507428082  › en  › IonQ-Announces-Intention-to-Acquire-Lightsynq-Expediting-Quantum-Computing-Quantum-Internet-and-Offering-Clear-Path-to-Millions-of-Qubits"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/4cVCanI6-JujWxXxczYVeN9jj3Z8T8n_x2uVpnaXpOM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tbXMu/YnVzaW5lc3N3aXJl/LmNvbS9tZWRpYS8y/MDI1MDUwNzQyODA4/Mi9lbi8yNDYyNjAz/LzIyL0lvblEtTGln/aHRzeW5xX2xvY2t1/cF9saWdodC5qcGc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "IonQ Announces Plans for First Space-Based Quantum Key Distribution Network",
+            "url": "https://www.businesswire.com/news/home/20250507863312/en/IonQ-Announces-Plans-for-First-Space-Based-Quantum-Key-Distribution-Network",
+            "description": "IonQ (NYSE: IONQ), a leading commercial quantum computing and networking company, today announced plans to launch a global space-to-space and space-to-ground...",
+            "age": "1 week ago",
+            "page_age": "2025-05-08T01:15:05",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "businesswire.com",
+                "hostname": "www.businesswire.com",
+                "favicon": "https://imgs.search.brave.com/1GERNwe_y4UBMQ4R98h03Ex17XOTQ15BJ7S60NGFwhw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzI5NmZhMjM5/ZGI2YmNhNzVkZWNh/MjI1NGI2ODk0MGVk/YTczZTZhMDJkOThh/YzAxNThhMjhkOGJk/NWFkNjZjZS93d3cu/YnVzaW5lc3N3aXJl/LmNvbS8",
+                "path": "› news  › home  › 20250507863312  › en  › IonQ-Announces-Plans-for-First-Space-Based-Quantum-Key-Distribution-Network"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/gqYwk4inoHg_6WWSWDPo9RBjH_EINbDM2ojHuTSO3jM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tbXMu/YnVzaW5lc3N3aXJl/LmNvbS9tZWRpYS8y/MDI1MDUwNzg2MzMx/Mi9lbi8yNDYyNzc4/LzIyL0lvblEtQ2Fw/ZWxsYV9sb2NrdXBf/ZGFyay5qcGc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Quantum Computing Inc. to Host First Quarter 2025 Shareholder Call on Thursday, May 15, 2025",
+            "url": "https://finance.yahoo.com/news/quantum-computing-inc-host-first-200100247.html",
+            "description": "Quantum Computing Inc. (\"QCi\" or the \"Company\") (Nasdaq: QUBT), an innovative, integrated photonics and quantum optics technology company, today announced that the Company will host a conference call and webcast on Thursday, May 15, 2025 at 4:30 p.m. Eastern Time to review the Company's operational ...",
+            "age": "1 week ago",
+            "page_age": "2025-05-06T20:30:08",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "finance.yahoo.com",
+                "hostname": "finance.yahoo.com",
+                "favicon": "https://imgs.search.brave.com/ZxJbtHZiiBXciqcRfJn3XPiTEOf_XYrooAjrJf1rnag/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjRkNjc1NWY5/MzM5ZjlkMWQyNjM5/OWNiMTQ4ZjcwNTQx/ZjA3ZDE4NDQ2M2Iw/MWZjZjVhOTFlM2Ji/NTE1NWRjZS9maW5h/bmNlLnlhaG9vLmNv/bS8",
+                "path": "› news  › quantum-computing-inc-host-first-200100247.html"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/MssMrZ83bN1Ec10MrSxkVe8bUk2BQywwr5Q-7jWTWYs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS56ZW5mcy5jb20v/ZW4vcHJuZXdzd2ly/ZS5jb20vZDQ1OWZi/MDgxNzQ2YjhjYTIw/YTRlY2M4NDM5MjNl/MTc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Quantum computer defeats a supercomputer in a very crucial task for the first time",
+            "url": "https://www.earth.com/news/quantum-computer-defeats-a-supercomputer-in-crucial-annealing-optimization-task/",
+            "description": "Quantum annealing shows real advantage for hard problems needing near-perfect answers, beating classical methods.",
+            "age": "1 week ago",
+            "page_age": "2025-05-06T17:43:26",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "earth.com",
+                "hostname": "www.earth.com",
+                "favicon": "https://imgs.search.brave.com/Iib0gdYLkO3_0CUuR2wnq8-xPgm2scftkTb_-AfPI0M/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTU3ZTVjNTBk/YmQ3ZjI5ZDY2NDg4/ZWJjOTM4YTJiNDQ2/OTM0NGE4MTM4YmM2/NTNlMzliMjY3MmJl/YWZlMWJlYi93d3cu/ZWFydGguY29tLw",
+                "path": "› news  › quantum-computer-defeats-a-supercomputer-in-crucial-annealing-optimization-task"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/aJSQT2jr785pm0pScEDHBD7ogpLC_FiH2EIHs-2nhTI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZmYy/LmVhcnRoLmNvbS91/cGxvYWRzLzIwMjUv/MDUvMDYxMTQxMDYv/cXVhbnR1bS1jb21w/dXRpbmdfYW5uZWFs/aW5nX2RlZmVhdHMt/c3VwZXJjb21wdXRl/cl8xbS5qcGc"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Quantum Computing Leader Rigetti Sets Major Investor Presentation: CEO to Reveal Strategic Updates",
+            "url": "https://www.stocktitan.net/news/RGTI/rigetti-computing-to-participate-in-fireside-chat-at-20th-annual-du4jxqicitld.html",
+            "description": "Exclusive fireside chat with Rigetti CEO Dr. Kulkarni at prestigious Needham Conference. Get insights into quantum computing future and strategic direction. Watch live.",
+            "age": "1 week ago",
+            "page_age": "2025-05-07T00:25:04",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "stocktitan.net",
+                "hostname": "www.stocktitan.net",
+                "favicon": "https://imgs.search.brave.com/oVbJYXQ1fMa7E7nV4NEgJIoaJed1n-Yg3MKop6cU2fw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDQxYTVjN2Y3/YTdkZjQ0NWYzNDRm/NzFjNjUyZGNmYjJl/Y2VhNGUxNDlhNzgx/OWZlOTAyYTE5Yjhk/MDBjOTE4Zi93d3cu/c3RvY2t0aXRhbi5u/ZXQv",
+                "path": "› news  › RGTI  › rigetti-computing-to-participate-in-fireside-chat-at-20th-annual-du4jxqicitld.html"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/0z2rZyB0SAG4f_OrKWNNSey-1v9ik_ZZqOpPkHxDJM8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuc3RvY2t0aXRh/bi5uZXQvY29tcGFu/eS1sb2dvL3JndGkt/bGcucG5n"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "Scientists discover quantum computing in the brain - The Brighter Side of News",
+            "url": "https://www.thebrighterside.news/post/scientists-discover-quantum-computing-in-the-brain/",
+            "description": "Tryptophan networks in cells may act as quantum computers, reshaping biology, neuroscience, and the search for life in the universe.",
+            "age": "1 week ago",
+            "page_age": "2025-05-06T19:40:06",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "thebrighterside.news",
+                "hostname": "www.thebrighterside.news",
+                "favicon": "https://imgs.search.brave.com/sfUq17MioHenZhKRtpmiHEfKDL0tDHNxHw3ypuHOJIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzNkMTgyNDdj/N2YzYzU2ZjAyMTBh/ZTIzNTZhZGQwOTZh/YzdlMjg0ZjBjY2I2/OGFlZjdhMmJlM2Nm/MWFiMDE1OS93d3cu/dGhlYnJpZ2h0ZXJz/aWRlLm5ld3Mv",
+                "path": "› post  › scientists-discover-quantum-computing-in-the-brain"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/5IOVcbpeKetOsRN2xtkiGDmvT20N2axVJ63siLyXcdw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dGhlYnJpZ2h0ZXJz/aWRlLm5ld3MvdXBs/b2Fkcy8yMDI1LzA1/L3F1YW50dW0tYnJh/aW4ud2VicD9hdXRv/PXdlYnA"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "QphoX, Rigetti and the NQCC Announce Collaboration on Multi-Channel Optical Readout of Quantum Processors",
+            "url": "https://www.globenewswire.com/news-release/2025/05/06/3074977/0/en/QphoX-Rigetti-and-the-NQCC-Announce-Collaboration-on-Multi-Channel-Optical-Readout-of-Quantum-Processors.html",
+            "description": "Rigetti Computing, Inc. DELFT, Netherlands, BERKELEY, Calif. and OXFORDSHIRE, United Kingdom, May 06, 2025 (GLOBE NEWSWIRE) -- QphoX B.V., a Dutch quantum technology startup developing leading frequency conversion systems for quantum applications, Rigetti Computing, Inc.",
+            "age": "1 week ago",
+            "page_age": "2025-05-06T00:00:00",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "globenewswire.com",
+                "hostname": "www.globenewswire.com",
+                "favicon": "https://imgs.search.brave.com/26290qlrwUDSgI4ihIzOrF15rA-4i46nYiWbHtbWWbw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTc3MWY1MDIx/YjZlYjcyODEyZDBl/MzZiYTYzNjUzOGNi/MDIxMWEzNmMwMzdm/MWQ3MjQyNDE3NGU3/MmFhMTRhNS93d3cu/Z2xvYmVuZXdzd2ly/ZS5jb20v",
+                "path": "› news-release  › 2025  › 05  › 06  › 3074977  › 0  › en  › QphoX-Rigetti-and-the-NQCC-Announce-Collaboration-on-Multi-Channel-Optical-Readout-of-Quantum-Processors.html"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/PH7ESp8Ts5cg8HkGIFPJWZCo2_gSeDJCXQ87TLP9IeY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tbC5n/bG9iZW5ld3N3aXJl/LmNvbS9SZXNvdXJj/ZS9Eb3dubG9hZC8z/M2I5OTY2ZS0zNTIy/LTRkNjUtODcyYS00/NjQxYmYwNDRkNTA"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "2 Quantum Computing Stocks to Buy Right Now @themotleyfool #stocks $AMZN $IBM",
+            "url": "https://www.fool.com/investing/2025/05/04/2-quantum-computing-stocks-to-buy-right-now/",
+            "description": "Unlike classical computers that process information in binary bits (0s and 1s), quantum computers leverage quantum mechanics principles (superposition and entanglement) to rapidly perform complex calculations.",
+            "age": "1 week ago",
+            "page_age": "2025-05-06T17:27:47",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "fool.com",
+                "hostname": "www.fool.com",
+                "favicon": "https://imgs.search.brave.com/WApw2kto_pU_fkDjG9VP20wwEs08ki09eil7b1Kc_aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWYzZjY3ZTJj/NWQzYjNhNTgxZTBl/ZDUxMTNmNjk1MTMz/ZWFjYWM5NTM4YzAx/Y2JmZmJjMDAyMWE4/NzIzMWRmZi93d3cu/Zm9vbC5jb20v",
+                "path": "› investing  › 2025  › 05  › 04  › 2-quantum-computing-stocks-to-buy-right-now"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/f9wOhMqBsEk2cfoySPiGY3f8r30BTUkLyIeax6h0QuQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9nLmZv/b2xjZG4uY29tL2Vk/aXRvcmlhbC9pbWFn/ZXMvODE3MDYxL251/Y2xlYXIucG5n"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "The Quantum Era has Already Begun | TIME",
+            "url": "https://time.com/7282334/the-quantum-era-has-begun/",
+            "description": "The quantum computing leaders of tomorrow are building, and commercializing, today.",
+            "age": "2 weeks ago",
+            "page_age": "2025-05-04T17:40:07",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "time.com",
+                "hostname": "time.com",
+                "favicon": "https://imgs.search.brave.com/nfd5JuER7u0mjyEPk1ytIw4_qGaihXtj6okMjkW62TE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWRkMzU3NTQy/ZTI0OTAwYTdmOWY0/MzAyZTRmZTcyOGY3/OTcyMGM2OGNjYThk/YjRiZDUxN2NmYmYz/MmY0MzcxZi90aW1l/LmNvbS8",
+                "path": "› 7282334  › the-quantum-era-has-begun"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/Xze0drB1_HxJvYuCmhUpTaekUG2sVCo6RRmLuTFW4NI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hcGku/dGltZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjUvMDUv/Q2lyY3VpdC1HcmVl/bi1Cb2FyZC1CYWNr/Z3JvdW5kLmpwZz9x/dWFsaXR5PTg1JmFt/cDt3PTEyMDAmYW1w/O2g9NjI4JmFtcDtj/cm9wPTE"
+            }
+        },
+        {
+            "type": "news_result",
+            "title": "The Computational Limit of Life May Be So Much Higher Than We Thought, Scientists Say",
+            "url": "https://www.popularmechanics.com/science/a64612958/computation-limit-biology/",
+            "description": "This idea forms from the emerging evidence that biology and quantum mechanics may not be as mutually exclusive as scientists originally thought. Although this idea requires rigorous experimentation to be proven, it might show that biological computation is much more powerful that even the greatest ...",
+            "age": "2 weeks ago",
+            "page_age": "2025-05-02T13:30:00",
+            "meta_url": {
+                "scheme": "https",
+                "netloc": "popularmechanics.com",
+                "hostname": "www.popularmechanics.com",
+                "favicon": "https://imgs.search.brave.com/5eBdbfS4leOm-yjE9Fe8n0h_cYnErS4ebpThJv09j5Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2IxM2RhOTZl/NzQ1MGJmMGRmYTBl/NmM5NGRmYjk5Mzhm/YzQ1MGMwYzE5NjAw/ZGUwMDk1NDU3NmQy/OTFiZTMyNy93d3cu/cG9wdWxhcm1lY2hh/bmljcy5jb20v",
+                "path": "› science  › a64612958  › computation-limit-biology"
+            },
+            "thumbnail": {
+                "src": "https://imgs.search.brave.com/vy0zZiRHxF9yfSOXDYEy7th5pFOJ2HzvUi8zFPddTUY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9oZWFk/LXJveWFsdHktZnJl/ZS1pbWFnZS0xNzQ2/MTMwNzY2LnBqcGVn/P2Nyb3A9MS4wMHh3/OjAuNzUyeGg7MCww/LjA3NDV4aCZhbXA7/cmVzaXplPTEyMDA6/Kg"
+            }
+        }
+    ]
+}

@@ -143,27 +143,43 @@
         // Placeholder for search results
         const resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = `
-          <div class="result-card my-[20px] sm:my-[55px]">
-            <div class="flex gap-4 items-center mb-[10px]">
-              <div class="bg-white w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] rounded-[10px] sm:rounded-[20px]">
-                <img
-                  src="${data.thumbnail.src}"
-                  alt="thumbnail"
-                  class="w-[29px] h-[29px] sm:w-12 sm:h-12 rounded-[10px] sm:rounded-[20px] object-cover"
-                  />
-              </div>
-              <div> 
-                <p class="text-[16px] font-semibold">${data.profile.name}</p>
-                <p class="text-[14px]">${data.meta_url.hostname}</p>
-              </div>
-            </div>
-            <a href="${data.url}" target="_blank" class="text-xl text-[#7799E5] font-medium hover:underline hover:cursor-pointer">
-                ${data.title}
-            </a>
-            <p class="text-[14px] line-clamp-3 text-white/80 mt-[10px]">
-              ${data.description}
-            </p>
+          <div class="flex gap-4 justify-between mb-6">
+        <div class="flex-1">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-4 h-4 bg-gray-700 rounded-full">
+            <img class="rounded-full" src="${escapeHTML(item.meta_url.favicon || "")}">  
           </div>
+          <span className="text-sm text-gray-400">
+            ${item.meta_url?.netloc || "Unknown source"}  
+          </span>
+          <span className="text-sm text-gray-400">•</span>
+          <span className="text-sm text-gray-400">
+            ${escapeHTML(item.age || "N/A")}
+          </span>
+        </div>
+        
+        <h2 className="text-blue-400 text-xl font-semibold mb-2 hover:underline">
+          <a href="${escapeHTML(item.url)}" target="_blank">
+            ${escapeHTML(item.title || "No title available")}
+          </a>
+        </h2>
+        
+        <p className="text-gray-300 text-sm mb-4">
+          ${escapeHTML(item.description || "No description available")}
+        </p>
+      </div>
+      
+      <div className="flex-shrink-0">
+        <div className="bg-gray-700 rounded-lg overflow-hidden">
+          <a href="${escapeHTML(item.url)}" target="_blank" aria-label="Visit ${escapeHTML(item.title || "Image")}">
+            <img style="width: 96px; height: 96px;" src="${escapeHTML(
+              item.thumbnail?.src || "https://via.placeholder.com/96x96"
+            )}" alt="${escapeHTML(item.title || "Image")}" 
+                 class="object-cover rounded-lg" loading="lazy" />
+          </a>
+        </div>
+      </div>
+      </div>
         `;
       }
     </script>
